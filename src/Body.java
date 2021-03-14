@@ -3,21 +3,29 @@ import java.awt.*;
 // This class represents celestial bodies like stars, planets, asteroids, etc..
 public class Body {
 
-    //TODO: change modifiers.
-    public String name;
-    public double mass;
-    public double radius;
-    public Vector3 position; // position of the center.
-    public Vector3 currentMovement;
-    public Color color; // for drawing the body.
+    public static final double G = 6.6743e-11;
 
-    //TODO: define constructor.
+    //changed modifiers.
+    private String name;
+    private double mass;
+    private double radius;
+    private Vector3 position; // position of the center.
+    private Vector3 currentMovement;
+    private Color color; // for drawing the body.
+
+    //defined constructor.
+    public Body(String name, double mass, double radius, Vector3 position, Vector3 currentMovement, Color color) {
+        this.name = name;
+        this.mass = mass;
+        this.radius = radius;
+        this.position = position;
+        this.currentMovement = currentMovement;
+        this.color = color;
+    }
 
     // Returns the distance between this body and the specified 'body'.
     public double distanceTo(Body body) {
-
-        //TODO: implement method.
-        return 0;
+        return this.position.distanceTo(body.position);
     }
 
     //Returns a vector representing the gravitational force exerted by 'body' on this body.
@@ -26,9 +34,11 @@ public class Body {
     //To calculate the force exerted on b1, simply multiply the normalized vector pointing from b1 to b2 with the
     //calculated force
     public Vector3 gravitationalForce(Body body) {
-
-        //TODO: implement method.
-        return null;
+        Vector3 direction = body.position.minus(this.position);
+        double distance = direction.length();
+        direction.normalize();
+        double force = G*this.mass*body.mass/(distance * distance);
+        return direction.times(force);
     }
 
     // Moves this body to a new position, according to the specified force vector 'force' exerted
@@ -36,17 +46,23 @@ public class Body {
     // (Movement depends on the mass of this body, its current movement and the exerted force)
     // Hint: see simulation loop in Simulation.java to find out how this is done
     public void move(Vector3 force) {
-
-        //TODO: implement method.
+        Vector3 newPosition = this.position.plus(force.times(1/this.mass)).plus(currentMovement);
+        this.currentMovement = newPosition.minus(this.position);
+        this.position = newPosition;
     }
 
     // Returns a string with the information about this body including
     // name, mass, radius, position and current movement. Example:
     // "Earth, 5.972E24 kg, radius: 6371000.0 m, position: [1.48E11,0.0,0.0] m, movement: [0.0,29290.0,0.0] m/s."
     public String toString() {
-
-        //TODO: implement method.
-        return "";
+        return String.format(
+                "%s, %e kg, radius: %f m, position: %s m, movement: %s m/s.",
+                this.name,
+                this.mass,
+                this.radius,
+                this.position.toString(),
+                this.currentMovement.toString()
+        );
     }
 
     // Draws the body to the current StdDraw canvas as a dot using 'color' of this body.
@@ -54,8 +70,7 @@ public class Body {
     // (use a conversion based on the logarithm as in 'Simulation.java').
     // Hint: use the method drawAsDot implemented in Vector3 for this
     public void draw() {
-
-        //TODO: implement method.
+        this.position.drawAsDot(this.radius, this.color);
     }
 
 }

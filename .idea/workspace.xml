@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="" />
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Autochanges from IntelliJ">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Body.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Body.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vector3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector3.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,11 +58,17 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555618944995" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.116027534" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -47,7 +76,7 @@
       <recent name="$PROJECT_DIR$/angabe" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Space">
+  <component name="RunManager" selected="Application.Simulation">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -88,10 +117,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Space" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Space" />
+    <configuration name="Simulation" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Simulation" />
       <module name="Aufgabenblatt1" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,11 +171,11 @@
       <item itemvalue="Application.Aufgabe2" />
       <item itemvalue="Application.Aufgabe3" />
       <item itemvalue="Application.Aufgabe4" />
-      <item itemvalue="Application.Space" />
+      <item itemvalue="Application.Simulation" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Space" />
+        <item itemvalue="Application.Simulation" />
         <item itemvalue="Application.Aufgabe2" />
         <item itemvalue="Application.Aufgabe3" />
         <item itemvalue="Application.Aufgabe4" />
@@ -166,7 +194,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1508412084367</updated>
-      <workItem from="1615685410200" duration="239000" />
+      <workItem from="1615685410200" duration="9398000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -175,24 +203,71 @@
       <option name="project" value="LOCAL" />
       <updated>1538405460105</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Autochanges from IntelliJ">
+      <created>1615685697344</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615685697344</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/../../.." />
     </ignored-roots>
     <MESSAGE value="A1 geändert" />
-    <option name="LAST_COMMIT_MESSAGE" value="A1 geändert" />
+    <MESSAGE value="Autochanges from IntelliJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Autochanges from IntelliJ" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1904" y="357" key="SettingsEditor" timestamp="1615685648788">
+    <state x="1857" y="367" width="1092" height="835" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615686063174">
       <screen x="0" y="0" width="3440" height="1410" />
     </state>
-    <state x="1904" y="357" key="SettingsEditor/0.0.3440.1410@0.0.3440.1410" timestamp="1615685648788" />
+    <state x="1857" y="367" width="1092" height="835" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1410@0.0.3440.1410" timestamp="1615686063174" />
+    <state width="1674" height="392" key="GridCell.Tab.0.bottom" timestamp="1615730738722">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state width="1674" height="392" key="GridCell.Tab.0.bottom/0.0.3440.1410@0.0.3440.1410" timestamp="1615730738722" />
+    <state width="1674" height="392" key="GridCell.Tab.0.center" timestamp="1615730738722">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state width="1674" height="392" key="GridCell.Tab.0.center/0.0.3440.1410@0.0.3440.1410" timestamp="1615730738722" />
+    <state width="1674" height="392" key="GridCell.Tab.0.left" timestamp="1615730738722">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state width="1674" height="392" key="GridCell.Tab.0.left/0.0.3440.1410@0.0.3440.1410" timestamp="1615730738722" />
+    <state width="1674" height="392" key="GridCell.Tab.0.right" timestamp="1615730738722">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state width="1674" height="392" key="GridCell.Tab.0.right/0.0.3440.1410@0.0.3440.1410" timestamp="1615730738722" />
+    <state x="795" y="376" key="SettingsEditor" timestamp="1615723518203">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state x="795" y="376" key="SettingsEditor/0.0.3440.1410@0.0.3440.1410" timestamp="1615723518203" />
+    <state x="1995" y="445" key="Vcs.Push.Dialog.v2" timestamp="1615685767081">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state x="1995" y="445" key="Vcs.Push.Dialog.v2/0.0.3440.1410@0.0.3440.1410" timestamp="1615685767081" />
+    <state x="2220" y="626" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615685670786">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state x="2220" y="626" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3440.1410@0.0.3440.1410" timestamp="1615685670786" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
