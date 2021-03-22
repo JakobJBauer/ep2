@@ -74,5 +74,12 @@ public class Vector3 {
         );
     }
 
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
 }
 

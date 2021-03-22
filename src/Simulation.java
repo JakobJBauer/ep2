@@ -101,6 +101,9 @@ public class Simulation {
                     body.draw();
                 }
 
+                mercury.drawLineTo(sun);
+                earth.drawLineTo(sun);
+
                 // show new positions
                 StdDraw.show();
             }
@@ -123,5 +126,6 @@ public class Simulation {
 * Ein Beispiel hierfür sind die Variablen/Attribute der Klasse Body, welche nun privat sind, und nur über den
 * Konstruktor initialisiert, und durch public Funktionen geändert werden können.
 */
+
 
 

@@ -73,5 +73,18 @@ public class Body {
         this.position.drawAsDot(this.radius, this.color);
     }
 
+    public void drawLineTo(Body body) {
+        StdDraw.line(this.position.getX(), this.position.getY(), body.position.getX(), body.position.getY());
+    }
+
 }
 
+
+/*
+#### Aufgabe 2
+
+        Implementieren Sie in der Klasse `Body` eine Methode  `public void drawLineTo(Body body)`, die eine Linie von diesem Body zum Body `body` zeichnet. Rufen Sie in der Klasse `Simulation` die Methode so auf, dass eine Linie von Merkur zur Sonne und von der Erde zur Sonne gezeichnet wird.
+
+        Hinweis:
+        - zum Zeichnen einer Linie kann die Methode `StdDraw.line(double x1, double y1, double x2, double y2)` verwendet werden.
+ */
