@@ -4,6 +4,9 @@ public class CosmicSystem {
     private String name;
     private MyNode head;
 
+    public String getName() {
+        return this.name;
+    }
 
     // Initialises this system as an empty system with a name.
     public CosmicSystem(String name) {
