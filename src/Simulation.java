@@ -14,8 +14,7 @@ public class Simulation {
         //changed implementation of this method according to 'Aufgabe1.md'.
 
         Body sun = new Body(
-                "Sol",
-                1.989e30,
+                "Sol",1.989e30,
                 696340e3,
                 new Vector3(0,0,0),
                 new Vector3(0,0,0),
@@ -23,44 +22,48 @@ public class Simulation {
         );
 
         Body earth = new Body(
-                "Earth",
-                5.972e24,
+                "Earth",5.972e24,
                 6371e3,
-                new Vector3(148e9,0,0),
-                new Vector3(0,29.29e3,0),
+                new Vector3(-1.394555e11,5.103346e10,0),
+                new Vector3(-10308.53,-28169.38,0),
                 StdDraw.BLUE
         );
 
         Body mercury = new Body(
                 "Mercury",
                 3.301e23,
-                2.4397e3,
-                new Vector3(-46.0e9, 0, 0),
-                new Vector3(0, -47.87e3,0),
-                StdDraw.RED
+                2440e3,
+                new Vector3(-5.439054e10,9.394878e9,0),
+                new Vector3(-17117.83,-46297.48,-1925.57),
+                StdDraw.GRAY
+        );
+
+        Body venus = new Body(
+                "Venus",
+                4.86747e24,
+                6052e3,
+                new Vector3(-1.707667e10,1.066132e11,2.450232e9),
+                new Vector3(-34446.02,-5567.47,2181.10),
+                StdDraw.PINK
         );
 
         Body mars = new Body(
                 "Mars",
-                6.39e23,
-                3389e3,
-                new Vector3(207.7e9, 0,0),
-                new Vector3(0, 24e3, 0),
-                StdDraw.ORANGE
-        );
-
-        Body asteroid = new Body(
-                "Asteroid",
-                2.39e25,
-                389e3,
-                new Vector3(120e10, 46e9,0),
-                new Vector3(-50e3, 2.1e3, 0),
-                StdDraw.WHITE
+                6.41712e23,
+                3390e3,
+                new Vector3(-1.010178e11,-2.043939e11,-1.591727E9),
+                new Vector3(20651.98,-10186.67,-2302.79),
+                StdDraw.RED
         );
 
 
-        Body[] bodies = new Body[] {earth, sun, mercury, mars, asteroid};
-        Vector3[] forceOnBody = new Vector3[bodies.length];
+        CosmicSystem bodies = new CosmicSystem("Milchstraße");
+        bodies.add(sun);
+        bodies.add(earth);
+        bodies.add(mercury);
+        bodies.add(venus);
+        bodies.add(mars);
+        Vector3[] forceOnBody = new Vector3[bodies.size()];
 
         StdDraw.setCanvasSize(500, 500);
         StdDraw.setXscale(-2*AU,2*AU);
@@ -76,19 +79,19 @@ public class Simulation {
             seconds++; // each iteration computes the movement of the celestial bodies within one second.
 
             // for each body (with index i): compute the total force exerted on it.
-            for (int i = 0; i < bodies.length; i++) {
+            for (int i = 0; i < bodies.size(); i++) {
                 forceOnBody[i] = new Vector3(0,0,0); // begin with zero
-                for (int j = 0; j < bodies.length; j++) {
+                for (int j = 0; j < bodies.size(); j++) {
                     if (i == j) continue;
-                    Vector3 forceToAdd = bodies[i].gravitationalForce(bodies[j]);
+                    Vector3 forceToAdd = bodies.get(i).gravitationalForce(bodies.get(j));
                     forceOnBody[i] = forceOnBody[i].plus(forceToAdd);
                 }
             }
             // now forceOnBody[i] holds the force vector exerted on body with index i.
 
             // for each body (with index i): move it according to the total force exerted on it.
-            for (int i = 0; i < bodies.length; i++) {
-                bodies[i].move(forceOnBody[i]);
+            for (int i = 0; i < bodies.size(); i++) {
+                bodies.get(i).move(forceOnBody[i]);
             }
 
             // show all movements in StdDraw canvas only every 3 hours (to speed up the simulation)
@@ -97,8 +100,8 @@ public class Simulation {
                 StdDraw.clear(StdDraw.BLACK);
 
                 // draw new positions
-                for (Body body : bodies) {
-                    body.draw();
+                for (int i = 0; i < bodies.size(); i++) {
+                    bodies.get(i).draw();
                 }
 
                 mercury.drawLineTo(sun);
