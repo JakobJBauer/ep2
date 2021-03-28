@@ -2,7 +2,7 @@
 public class CosmicSystem {
 
     private String name;
-    private Node head;
+    private MyNode head;
 
 
     // Initialises this system as an empty system with a name.
@@ -15,7 +15,7 @@ public class CosmicSystem {
     // returns 'true' if the list was changed as a result of the call and 'false' otherwise.
     public boolean add(Body body) {
         if (this.head != null) return head.addNode(body);
-        this.head = new Node(body);
+        this.head = new MyNode(body);
         return true;
     }
 
@@ -40,35 +40,4 @@ public class CosmicSystem {
     public int size() {
         return this.head == null ? 0 : this.head.size();
     }
-
-
-    class Node {
-        public Body data;
-        public Node nextNode;
-
-        public Node(Body data) {
-            this.data = data;
-        }
-
-        public boolean addNode(Body body) {
-            if (body.getName().equals(this.data.getName())) return false;
-            if (this.nextNode != null) return this.nextNode.addNode(body);
-            this.nextNode = new Node(body);
-            return true;
-        }
-
-        public Body getBody(int i) {
-            return i==0 ? this.data : this.nextNode.getBody(--i);
-        }
-
-        public Body getBody(String name) {
-            if (this.data.getName().equals(name)) return this.data;
-            return this.nextNode == null ? null : this.nextNode.getBody(name);
-        }
-
-        public int size() {
-            return this.nextNode == null ? 1 : 1 + this.nextNode.size();
-        }
-    }
 }
-
