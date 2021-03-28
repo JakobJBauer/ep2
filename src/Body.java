@@ -23,6 +23,10 @@ public class Body {
         this.color = color;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     // Returns the distance between this body and the specified 'body'.
     public double distanceTo(Body body) {
         return this.position.distanceTo(body.position);
