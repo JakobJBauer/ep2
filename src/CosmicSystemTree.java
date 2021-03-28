@@ -1,3 +1,5 @@
+import java.awt.*;
+
 //This class represents a binary search tree for objects of class 'CosmicSystem'
 public class CosmicSystemTree {
 
@@ -51,7 +53,15 @@ public class CosmicSystemTree {
 
     //BONUS TASK: sets a new canvas and draws the tree using StdDraw
     public void drawTree() {
-        //TODO: implement method (optional bonus task)
+        int width = 1500;
+        int height = 500;
+        StdDraw.enableDoubleBuffering();
+        StdDraw.setPenColor(Color.BLACK);
+        StdDraw.setCanvasSize(width, height);
+        StdDraw.setXscale(0, width);
+        StdDraw.setYscale(0, height);
+        if (this.head != null) this.head.draw(width/2.0,height*0.9, width/4.0,height/10.0); // Max 10 layers
+        StdDraw.show();
     }
 }
 

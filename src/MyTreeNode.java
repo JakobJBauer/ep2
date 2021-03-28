@@ -43,4 +43,17 @@ public class MyTreeNode {
         output += rightChild == null ? "" : rightChild.toString();
         return output;
     }
+
+    public void draw(double x, double y, double xOffset, double yOffset) {
+        StdDraw.text(x, y, this.key + ", " + this.value.getName());
+
+        if (this.leftChild != null) {
+            this.leftChild.draw(x - xOffset, y - yOffset, xOffset/2, yOffset);
+            StdDraw.line(x - 2, y - 10, x - xOffset, y - yOffset + 10);
+        }
+        if (this.rightChild != null) {
+            StdDraw.line(x + 2, y - 10, x + xOffset, y - yOffset + 10);
+            this.rightChild.draw(x + xOffset, y - yOffset, xOffset/2, yOffset);
+        }
+    }
 }
