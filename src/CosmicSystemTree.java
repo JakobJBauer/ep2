@@ -1,7 +1,7 @@
 //This class represents a binary search tree for objects of class 'CosmicSystem'
 public class CosmicSystemTree {
 
-    //TODO: Define variables.
+    private MyTreeNode head;
 
     // Adds a system of bodies to the tree. Since the keys of the tree are the names of bodies,
     // adding a system adds multiple (key, value) pairs to the tree, one for each body of the
@@ -13,8 +13,17 @@ public class CosmicSystemTree {
     // The method returns 'true' if the tree was changed as a result of the call and
     // 'false' otherwise.
     public boolean add(CosmicSystem system) {
-        //TODO: implement method
-        return false;
+        // Check if one of the names exists in the tree
+        for (int i = 0; i < system.size(); i++) {
+            if (this.get(system.get(i).getName()) != null) return false;
+        }
+
+        // Add every body in system to the searchTree
+        for (int i = 0; i < system.size(); i++) {
+            if (head != null) head.add(system.get(i).getName(), system);
+            else head = new MyTreeNode(system.get(i).getName(), system);
+        }
+        return true;
     }
 
     // Returns the cosmic system in which a body with the specified name exists.
@@ -22,14 +31,12 @@ public class CosmicSystemTree {
     // Europa, Ganymed, Kallisto) will be returned.
     // If no such system is found, 'null' is returned.
     public CosmicSystem get(String name) {
-        //TODO: implement method
-        return null;
+        return this.head == null ? null : this.head.get(name);
     }
 
     // Returns the overall number of bodies indexed by the tree.
     public int numberOfBodies() {
-        //TODO: implement method
-        return -1;
+        return this.head == null ? 0 : this.head.numberOfBodies();
     }
 
     // Returns a readable representation with (key, value) pairs, sorted alphabetically by the key.
@@ -47,11 +54,6 @@ public class CosmicSystemTree {
     public void drawTree() {
         //TODO: implement method (optional bonus task)
     }
-
-    //TODO: Define additional class(es) implementing the binary tree (either here or outside class).
-
-
-
 }
 
 
