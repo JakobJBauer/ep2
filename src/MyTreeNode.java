@@ -49,10 +49,10 @@ public class MyTreeNode {
 
         if (this.leftChild != null) {
             this.leftChild.draw(x - xOffset, y - yOffset, xOffset/2, yOffset);
-            StdDraw.line(x - 2, y - 10, x - xOffset, y - yOffset + 10);
+            StdDraw.line(x - 10, y - 10, x - xOffset, y - yOffset + 10);
         }
         if (this.rightChild != null) {
-            StdDraw.line(x + 2, y - 10, x + xOffset, y - yOffset + 10);
+            StdDraw.line(x + 10, y - 10, x + xOffset, y - yOffset + 10);
             this.rightChild.draw(x + xOffset, y - yOffset, xOffset/2, yOffset);
         }
     }

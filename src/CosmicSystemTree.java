@@ -60,7 +60,7 @@ public class CosmicSystemTree {
         StdDraw.setCanvasSize(width, height);
         StdDraw.setXscale(0, width);
         StdDraw.setYscale(0, height);
-        if (this.head != null) this.head.draw(width/2.0,height*0.9, width/4.0,height/10.0); // Max 10 layers
+        if (this.head != null) this.head.draw(width/2.0,height*0.9, width/4.0,height/5.0); // Max 5 layers
         StdDraw.show();
     }
 }
