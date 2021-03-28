@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Added TreeNode and implemented constructor, add, get and numberOdBodies">
-      <change beforePath="$PROJECT_DIR$/src/CosmicSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CosmicSystem.java" afterDir="false" />
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Added getName() to CosmicSystem.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CosmicSystemTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CosmicSystemTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyTreeNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +196,7 @@
       <workItem from="1615685410200" duration="9398000" />
       <workItem from="1616368505000" duration="13000" />
       <workItem from="1616435234339" duration="1506000" />
-      <workItem from="1616844527983" duration="8566000" />
+      <workItem from="1616844527983" duration="9020000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -252,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616966135668</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added getName() to CosmicSystem.java">
+      <created>1616966207138</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1616966207138</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +291,8 @@
     <MESSAGE value="Migrated to new Data Structure" />
     <MESSAGE value="Extracted class Node into a dedicated File and renamed it MyNode to dodge possible future issues" />
     <MESSAGE value="Added TreeNode and implemented constructor, add, get and numberOdBodies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added TreeNode and implemented constructor, add, get and numberOdBodies" />
+    <MESSAGE value="Added getName() to CosmicSystem.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getName() to CosmicSystem.java" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1857" y="367" width="1092" height="907" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616964362948">
@@ -297,22 +307,22 @@
       <screen x="0" y="0" width="3440" height="1410" />
     </state>
     <state x="2100" y="476" key="FileChooserDialogImpl/0.0.3440.1410@0.0.3440.1410" timestamp="1616368515714" />
-    <state width="1674" height="391" key="GridCell.Tab.0.bottom" timestamp="1616964378610">
+    <state width="1674" height="391" key="GridCell.Tab.0.bottom" timestamp="1616966617254">
       <screen x="0" y="0" width="3440" height="1410" />
     </state>
-    <state width="1674" height="391" key="GridCell.Tab.0.bottom/0.0.3440.1410@0.0.3440.1410" timestamp="1616964378610" />
-    <state width="1674" height="391" key="GridCell.Tab.0.center" timestamp="1616964378609">
+    <state width="1674" height="391" key="GridCell.Tab.0.bottom/0.0.3440.1410@0.0.3440.1410" timestamp="1616966617254" />
+    <state width="1674" height="391" key="GridCell.Tab.0.center" timestamp="1616966617254">
       <screen x="0" y="0" width="3440" height="1410" />
     </state>
-    <state width="1674" height="391" key="GridCell.Tab.0.center/0.0.3440.1410@0.0.3440.1410" timestamp="1616964378609" />
-    <state width="1674" height="391" key="GridCell.Tab.0.left" timestamp="1616964378609">
+    <state width="1674" height="391" key="GridCell.Tab.0.center/0.0.3440.1410@0.0.3440.1410" timestamp="1616966617254" />
+    <state width="1674" height="391" key="GridCell.Tab.0.left" timestamp="1616966617254">
       <screen x="0" y="0" width="3440" height="1410" />
     </state>
-    <state width="1674" height="391" key="GridCell.Tab.0.left/0.0.3440.1410@0.0.3440.1410" timestamp="1616964378609" />
-    <state width="1674" height="391" key="GridCell.Tab.0.right" timestamp="1616964378609">
+    <state width="1674" height="391" key="GridCell.Tab.0.left/0.0.3440.1410@0.0.3440.1410" timestamp="1616966617254" />
+    <state width="1674" height="391" key="GridCell.Tab.0.right" timestamp="1616966617254">
       <screen x="0" y="0" width="3440" height="1410" />
     </state>
-    <state width="1674" height="391" key="GridCell.Tab.0.right/0.0.3440.1410@0.0.3440.1410" timestamp="1616964378609" />
+    <state width="1674" height="391" key="GridCell.Tab.0.right/0.0.3440.1410@0.0.3440.1410" timestamp="1616966617254" />
     <state x="795" y="376" key="SettingsEditor" timestamp="1615723518203">
       <screen x="0" y="0" width="3440" height="1410" />
     </state>

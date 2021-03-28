@@ -35,4 +35,12 @@ public class MyTreeNode {
         int rightBodies = rightChild == null ? 0 : rightChild.numberOfBodies();
         return 1 + leftBodies + rightBodies;
     }
+
+    public String toString() {
+        String output = "";
+        output += leftChild == null ? "" : leftChild.toString();
+        output += "(" + this.key + ", " + this.value.getName() + ")\n";
+        output += rightChild == null ? "" : rightChild.toString();
+        return output;
+    }
 }

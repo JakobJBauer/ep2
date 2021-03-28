@@ -46,8 +46,7 @@ public class CosmicSystemTree {
     //
     //Hint: for this you will also need a method in CosmicSystem.java to access the name of a CosmicSystem object.
     public String toString() {
-        //TODO: implement method
-        return null;
+        return this.head == null ? "" : this.head.toString();
     }
 
     //BONUS TASK: sets a new canvas and draws the tree using StdDraw
