@@ -87,7 +87,7 @@ public class CosmicSystem {
     //returns true if removal was done, and false otherwise (no body with the same name)
     public boolean remove(Body body) {
         if (this.head == null) return false;
-        if (this.head.getBody(0).getName().equals(body.getName())) this.remove(0);
+        if (this.head.getBody(0).getName().equals(body.getName())) return this.remove(0);
         return this.head.remove(body);
     }
 
