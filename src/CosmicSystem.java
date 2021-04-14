@@ -94,8 +94,15 @@ public class CosmicSystem {
     // Returns a new list that contains the same elements as this list in reverse order. The list 'this'
     // is not changed and only the references to the bodies are copied, not their content (shallow copy).
     public CosmicSystem reverse() {
-        //TODO: implement method.
-        return null;
+        CosmicSystem output = new CosmicSystem(this.name);
+        if (this.head == null) return output;
+        output.head = this.head;
+        while (output.head.getNextNode() != null) {
+            output.head = output.head.getNextNode();
+        }
+        // Now output.head points to the last element
+       output.head.reverse();
+        return output;
     }
 
     // Returns a readable representation with the name of the system and all bodies in order of the list.

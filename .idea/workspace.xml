@@ -200,7 +200,7 @@
       <workItem from="1616844527983" duration="11435000" />
       <workItem from="1618141000407" duration="627000" />
       <workItem from="1618277163588" duration="3258000" />
-      <workItem from="1618387819119" duration="9541000" />
+      <workItem from="1618387819119" duration="11391000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -307,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618425337113</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added remove by body function&#10;Improved functions">
+      <created>1618426312679</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1618426312679</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +351,8 @@
     <MESSAGE value="Added delete by int function" />
     <MESSAGE value="Removed redundant function" />
     <MESSAGE value="Improved readability" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved readability" />
+    <MESSAGE value="Added remove by body function&#10;Improved functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added remove by body function&#10;Improved functions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1036" y="273" width="789" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618393790242">

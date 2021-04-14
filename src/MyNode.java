@@ -60,4 +60,12 @@ public class MyNode {
         if (this.data.getName().equals(body.getName())) return this.remove(0);
         return this.nextNode != null && this.nextNode.remove(body);
     }
+
+    public void reverse() {
+        MyNode buffer = this.prevNode;
+        if (this.nextNode != null) this.prevNode = this.nextNode;
+        if (buffer == null) return;
+        this.nextNode = buffer;
+        this.nextNode.reverse();
+    }
 }
