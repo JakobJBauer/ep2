@@ -34,12 +34,6 @@ public class MyNode {
         return this.nextNode.addNode(i-1, body);
     }
 
-    public boolean nameInList(Body body) {
-        if (body.getName().equals(this.data.getName())) return true;
-        if (this.nextNode != null) return this.nextNode.nameInList(body);
-        return false;
-    }
-
     public Body getBody(int i) {
         return i==0 ? this.data : this.nextNode.getBody(--i);
     }
