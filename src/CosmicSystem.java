@@ -74,7 +74,7 @@ public class CosmicSystem {
     //removes the body at index i from the list, if i is a valid index
     //returns true if removal was done, and false otherwise (invalid index)
     public boolean remove(int i) {
-        if (i < 0) return false;
+        if (i < 0 || this.head == null) return false;
         if (i == 0) {
             this.head = this.head.getNextNode();
             this.head.setPrevNode(null);
@@ -86,8 +86,9 @@ public class CosmicSystem {
     //removes a body from the list, if the list contains a body with the same name as the input body
     //returns true if removal was done, and false otherwise (no body with the same name)
     public boolean remove(Body body) {
-        //TODO: implement method.
-        return false;
+        if (this.head == null) return false;
+        if (this.head.getBody(0).getName().equals(body.getName())) this.remove(0);
+        return this.head.remove(body);
     }
 
     // Returns a new list that contains the same elements as this list in reverse order. The list 'this'

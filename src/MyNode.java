@@ -34,6 +34,7 @@ public class MyNode {
     }
 
     public Body getBody(int i) {
+        if (i != 0 && this.nextNode == null)  return null;
         return i==0 ? this.data : this.nextNode.getBody(--i);
     }
 
@@ -53,5 +54,10 @@ public class MyNode {
             return true;
         }
         return this.nextNode != null && this.nextNode.remove((i - 1));
+    }
+
+    public boolean remove(Body body) {
+        if (this.data.getName().equals(body.getName())) return this.remove(0);
+        return this.nextNode != null && this.nextNode.remove(body);
     }
 }
