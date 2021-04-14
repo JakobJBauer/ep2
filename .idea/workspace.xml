@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Implemented drawMethod for the CosmicSystemTree">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Body.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Body.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aufgabe3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aufgabe3Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +198,7 @@
       <workItem from="1616844527983" duration="11435000" />
       <workItem from="1618141000407" duration="627000" />
       <workItem from="1618277163588" duration="3258000" />
-      <workItem from="1618387819119" duration="17991000" />
+      <workItem from="1618387819119" duration="18159000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -335,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618437734509</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added force  variable to Body&#10;Changed Simulation.java and Body.java to use the new force variable">
+      <created>1618439770128</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1618439770129</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,7 +381,8 @@
     <MESSAGE value="Added reverse function" />
     <MESSAGE value="Added reverse function&#10;Fixed Testprint" />
     <MESSAGE value="Fixed bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs" />
+    <MESSAGE value="Added force  variable to Body&#10;Changed Simulation.java and Body.java to use the new force variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added force  variable to Body&#10;Changed Simulation.java and Body.java to use the new force variable" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1036" y="273" width="789" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618393790242">
@@ -397,25 +403,25 @@
       <screen x="0" y="0" width="3440" height="1410" />
     </state>
     <state x="2100" y="476" key="FileChooserDialogImpl/0.0.3440.1410@0.0.3440.1410" timestamp="1616368515714" />
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1618439699187">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1618439762969">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1618439699187" />
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1618439762969" />
     <state width="1674" height="391" key="GridCell.Tab.0.bottom/0.0.3440.1410@0.0.3440.1410" timestamp="1616969030689" />
-    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1618439699186">
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1618439762969">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1618439699186" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1618439762969" />
     <state width="1674" height="391" key="GridCell.Tab.0.center/0.0.3440.1410@0.0.3440.1410" timestamp="1616969030688" />
-    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1618439699186">
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1618439762969">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1618439699186" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1618439762969" />
     <state width="1674" height="391" key="GridCell.Tab.0.left/0.0.3440.1410@0.0.3440.1410" timestamp="1616969030688" />
-    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1618439699186">
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1618439762969">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1618439699186" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1618439762969" />
     <state width="1674" height="391" key="GridCell.Tab.0.right/0.0.3440.1410@0.0.3440.1410" timestamp="1616969030689" />
     <state width="1877" height="351" key="GridCell.Tab.1.bottom" timestamp="1618437366578">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -437,10 +443,10 @@
       <screen x="0" y="0" width="3440" height="1410" />
     </state>
     <state x="795" y="376" key="SettingsEditor/0.0.3440.1410@0.0.3440.1410" timestamp="1615723518203" />
-    <state x="1104" y="331" key="Vcs.Push.Dialog.v2" timestamp="1618437738211">
+    <state x="1104" y="331" key="Vcs.Push.Dialog.v2" timestamp="1618439772767">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1104" y="331" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1618437738211" />
+    <state x="1104" y="331" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1618439772767" />
     <state x="1995" y="445" key="Vcs.Push.Dialog.v2/0.0.3440.1410@0.0.3440.1410" timestamp="1616435659292" />
     <state x="1239" y="466" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618429254266">
       <screen x="0" y="0" width="1920" height="1050" />
