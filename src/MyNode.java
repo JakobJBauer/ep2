@@ -30,8 +30,7 @@ public class MyNode {
                 this.nextNode.nextNode.prevNode = this.nextNode;
             return true;
         }
-        if (this.nextNode == null) return false;
-        return this.nextNode.addNode(i-1, body);
+        return this.nextNode != null && this.nextNode.addNode(i-1, body);
     }
 
     public Body getBody(int i) {
@@ -50,11 +49,9 @@ public class MyNode {
     public boolean remove(int i) {
         if (i == 0) {
             this.prevNode.nextNode = this.nextNode;
-            if (this.nextNode != null)
-                this.nextNode.prevNode = this.prevNode;
+            if (this.nextNode != null) this.nextNode.prevNode = this.prevNode;
             return true;
         }
-        if (this.nextNode == null) return false;
-        return this.nextNode.remove(i-1);
+        return this.nextNode != null && this.nextNode.remove((i - 1));
     }
 }
