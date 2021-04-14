@@ -11,6 +11,7 @@ public class Body {
     private double radius;
     private Vector3 position; // position of the center.
     private Vector3 currentMovement;
+    private Vector3 force;
     private Color color; // for drawing the body.
 
     //defined constructor.
@@ -25,6 +26,10 @@ public class Body {
 
     public String getName() {
         return this.name;
+    }
+
+    public void setForce(Vector3 force) {
+        this.force = force;
     }
 
     // Returns the distance between this body and the specified 'body'.
@@ -51,6 +56,11 @@ public class Body {
     // Hint: see simulation loop in Simulation.java to find out how this is done
     public void move(Vector3 force) {
         Vector3 newPosition = this.position.plus(force.times(1/this.mass)).plus(currentMovement);
+        this.currentMovement = newPosition.minus(this.position);
+        this.position = newPosition;
+    }
+    public void move() {
+        Vector3 newPosition = this.position.plus(this.force.times(1/this.mass)).plus(currentMovement);
         this.currentMovement = newPosition.minus(this.position);
         this.position = newPosition;
     }

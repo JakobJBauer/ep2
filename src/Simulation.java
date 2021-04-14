@@ -63,7 +63,7 @@ public class Simulation {
         bodies.add(mercury);
         bodies.add(venus);
         bodies.add(mars);
-        Vector3[] forceOnBody = new Vector3[bodies.size()];
+
 
         StdDraw.setCanvasSize(500, 500);
         StdDraw.setXscale(-2*AU,2*AU);
@@ -80,18 +80,18 @@ public class Simulation {
 
             // for each body (with index i): compute the total force exerted on it.
             for (int i = 0; i < bodies.size(); i++) {
-                forceOnBody[i] = new Vector3(0,0,0); // begin with zero
+                Vector3 buffer = new Vector3(0,0,0); // begin with zero
                 for (int j = 0; j < bodies.size(); j++) {
                     if (i == j) continue;
                     Vector3 forceToAdd = bodies.get(i).gravitationalForce(bodies.get(j));
-                    forceOnBody[i] = forceOnBody[i].plus(forceToAdd);
+                    bodies.get(i).setForce(buffer.plus(forceToAdd));
                 }
             }
             // now forceOnBody[i] holds the force vector exerted on body with index i.
 
             // for each body (with index i): move it according to the total force exerted on it.
             for (int i = 0; i < bodies.size(); i++) {
-                bodies.get(i).move(forceOnBody[i]);
+                bodies.get(i).move();
             }
 
             // show all movements in StdDraw canvas only every 3 hours (to speed up the simulation)
