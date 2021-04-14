@@ -200,7 +200,7 @@
       <workItem from="1616844527983" duration="11435000" />
       <workItem from="1618141000407" duration="627000" />
       <workItem from="1618277163588" duration="3258000" />
-      <workItem from="1618387819119" duration="4982000" />
+      <workItem from="1618387819119" duration="8289000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -279,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616968937515</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Changed LinkedList to double LinkedList&#10;Added &quot;add by int&quot;-method">
+      <created>1618393933962</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1618393933962</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +319,8 @@
     <MESSAGE value="Added getName() to CosmicSystem.java" />
     <MESSAGE value="Added toString() function in CosmicSystemTree.java, to extract a sorted, readable format of the binary tree" />
     <MESSAGE value="Implemented drawMethod for the CosmicSystemTree" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented drawMethod for the CosmicSystemTree" />
+    <MESSAGE value="Changed LinkedList to double LinkedList&#10;Added &quot;add by int&quot;-method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed LinkedList to double LinkedList&#10;Added &quot;add by int&quot;-method" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1036" y="273" width="789" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618393790242">
@@ -329,21 +337,25 @@
       <screen x="0" y="0" width="3440" height="1410" />
     </state>
     <state x="2100" y="476" key="FileChooserDialogImpl/0.0.3440.1410@0.0.3440.1410" timestamp="1616368515714" />
-    <state width="1674" height="391" key="GridCell.Tab.0.bottom" timestamp="1616969030689">
-      <screen x="0" y="0" width="3440" height="1410" />
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1618393889281">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1618393889281" />
     <state width="1674" height="391" key="GridCell.Tab.0.bottom/0.0.3440.1410@0.0.3440.1410" timestamp="1616969030689" />
-    <state width="1674" height="391" key="GridCell.Tab.0.center" timestamp="1616969030688">
-      <screen x="0" y="0" width="3440" height="1410" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1618393889281">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1618393889281" />
     <state width="1674" height="391" key="GridCell.Tab.0.center/0.0.3440.1410@0.0.3440.1410" timestamp="1616969030688" />
-    <state width="1674" height="391" key="GridCell.Tab.0.left" timestamp="1616969030688">
-      <screen x="0" y="0" width="3440" height="1410" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1618393889281">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1618393889281" />
     <state width="1674" height="391" key="GridCell.Tab.0.left/0.0.3440.1410@0.0.3440.1410" timestamp="1616969030688" />
-    <state width="1674" height="391" key="GridCell.Tab.0.right" timestamp="1616969030689">
-      <screen x="0" y="0" width="3440" height="1410" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1618393889281">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1618393889281" />
     <state width="1674" height="391" key="GridCell.Tab.0.right/0.0.3440.1410@0.0.3440.1410" timestamp="1616969030689" />
     <state x="795" y="376" key="SettingsEditor" timestamp="1615723518203">
       <screen x="0" y="0" width="3440" height="1410" />

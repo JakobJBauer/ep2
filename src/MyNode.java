@@ -8,6 +8,7 @@ public class MyNode {
         this.data = data;
     }
 
+    public MyNode getNextNode() {return this.nextNode;}
     public void setNextNode(MyNode node) {this.nextNode = node;}
     public void setPrevNode(MyNode node) {this.prevNode = node;}
 
@@ -50,5 +51,16 @@ public class MyNode {
 
     public int size() {
         return this.nextNode == null ? 1 : 1 + this.nextNode.size();
+    }
+
+    public boolean remove(int i) {
+        if (i == 0) {
+            this.prevNode.nextNode = this.nextNode;
+            if (this.nextNode != null)
+                this.nextNode.prevNode = this.prevNode;
+            return true;
+        }
+        if (this.nextNode == null) return false;
+        return this.nextNode.remove(i-1);
     }
 }

@@ -55,7 +55,7 @@ public class CosmicSystem {
     public boolean add(int i, Body body) {
         if (i < 0) return false;
         if (this.head != null) {
-            if (this.head.nameInList(body)) return false;
+            if (this.head.getBody(body.getName()) != null) return false;
             if (i==0) { // Replace first node with non-empty List
                 MyNode buffer = this.head;
                 this.head = new MyNode(body);
@@ -74,8 +74,13 @@ public class CosmicSystem {
     //removes the body at index i from the list, if i is a valid index
     //returns true if removal was done, and false otherwise (invalid index)
     public boolean remove(int i) {
-        //TODO: implement method.
-        return false;
+        if (i < 0) return false;
+        if (i == 0) {
+            this.head = this.head.getNextNode();
+            this.head.setPrevNode(null);
+            return true;
+        }
+        return this.head.remove(i);
     }
 
     //removes a body from the list, if the list contains a body with the same name as the input body
