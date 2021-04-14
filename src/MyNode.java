@@ -61,11 +61,12 @@ public class MyNode {
         return this.nextNode != null && this.nextNode.remove(body);
     }
 
-    public void reverse() {
-        MyNode buffer = this.prevNode;
-        if (this.nextNode != null) this.prevNode = this.nextNode;
-        if (buffer == null) return;
-        this.nextNode = buffer;
-        this.nextNode.reverse();
+    public void reverse(CosmicSystem cosmos) {
+        cosmos.add(this.data);
+        if (this.prevNode != null) this.prevNode.reverse(cosmos);
+    }
+
+    public String toString() {
+        return this.nextNode == null ? this.data.toString() + "\n" : this.data.toString() + "\n" + this.nextNode.toString();
     }
 }

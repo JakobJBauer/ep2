@@ -64,7 +64,7 @@ public class Aufgabe3Test {
         testStringEquals(jupiterSystem.get(6).getName(), "Himalia");
         testStringEquals(jupiterSystem.get(7).getName(), "Elara");
 
-        System.out.println(jupiterSystem); //prints all bodies in the system with their properties:
+        System.out.println(jupiterSystem.toString()); //prints all bodies in the system with their properties:
         // Jupiter, 1.898E27 kg, radius: 6.9911E7 m, position: [0.0,0.0,0.0] m, movement: [0.0,0.0,0.0] m/s.
         // Io, 8.9E22 kg, radius: 1822000.0 m, position: [0.0,0.0,0.0] m, movement: [0.0,0.0,0.0] m/s.
         // Europa, 4.8E22 kg, radius: 1561000.0 m, position: [0.0,0.0,0.0] m, movement: [0.0,0.0,0.0] m/s.
@@ -76,7 +76,7 @@ public class Aufgabe3Test {
 
         System.out.println("\nTesting reverse()...\n-----------");
         jupiterSystem = jupiterSystem.reverse();
-        System.out.println(jupiterSystem); //all bodies in reversed order:
+        System.out.println(jupiterSystem.toString()); //all bodies in reversed order:
         // Elara, 8.7E17 kg, radius: 39000.0 m, position: [0.0,0.0,0.0] m, movement: [0.0,0.0,0.0] m/s.
         // Himalia, 6.7E18 kg, radius: 80000.0 m, position: [0.0,0.0,0.0] m, movement: [0.0,0.0,0.0] m/s.
         // Amalthea, 2.1E18 kg, radius: 84000.0 m, position: [0.0,0.0,0.0] m, movement: [0.0,0.0,0.0] m/s.
@@ -97,7 +97,7 @@ public class Aufgabe3Test {
         testValue(jupiterSystem.remove(new Body("Himalia", 6.7e18, 80e3, new Vector3(0, 0, 0),
                 new Vector3(0, 0, 0), Color.GRAY)), true);
         testValue(jupiterSystem.size(), 4);
-        System.out.println(jupiterSystem);
+        System.out.println(jupiterSystem.toString());
         // Jupiter System:
         // Amalthea, 2.1E18 kg, radius: 84000.0 m, position: [0.0,0.0,0.0] m, movement: [0.0,0.0,0.0] m/s.
         // Kallisto, 1.1E23 kg, radius: 2411000.0 m, position: [0.0,0.0,0.0] m, movement: [0.0,0.0,0.0] m/s.

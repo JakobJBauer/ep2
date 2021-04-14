@@ -101,7 +101,7 @@ public class CosmicSystem {
             output.head = output.head.getNextNode();
         }
         // Now output.head points to the last element
-       output.head.reverse();
+       output.head.reverse(output);
         return output;
     }
 
@@ -113,7 +113,6 @@ public class CosmicSystem {
     //
     //Hint: also use toString() in Body.java for this.
     public String toString() {
-        //TODO: implement method.
-        return null;
+        return this.head == null ? this.name+":\n" : this.name+":\n" + this.head.toString();
     }
 }
