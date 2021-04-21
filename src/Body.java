@@ -1,7 +1,7 @@
 import java.awt.*;
 
 // This class represents celestial bodies like stars, planets, asteroids, etc..
-public class Body {
+public class Body implements CosmicComponent {
 
     public static final double G = 6.6743e-11;
 
@@ -26,6 +26,21 @@ public class Body {
 
     public String getName() {
         return this.name;
+    }
+
+    @Override
+    public int numberOfBodies() {
+        return 1;
+    }
+
+    @Override
+    public double getMass() {
+        return this.mass;
+    }
+
+    @Override
+    public Vector3 getMassCenter() {
+        return this.position;
     }
 
     public void setForce(Vector3 force) {
@@ -69,14 +84,7 @@ public class Body {
     // name, mass, radius, position and current movement. Example:
     // "Earth, 5.972E24 kg, radius: 6371000.0 m, position: [1.48E11,0.0,0.0] m, movement: [0.0,29290.0,0.0] m/s."
     public String toString() {
-        return String.format(
-                "%s, %e kg, radius: %f m, position: %s m, movement: %s m/s.",
-                this.name,
-                this.mass,
-                this.radius,
-                this.position.toString(),
-                this.currentMovement.toString()
-        );
+        return this.name;
     }
 
     // Draws the body to the current StdDraw canvas as a dot using 'color' of this body.

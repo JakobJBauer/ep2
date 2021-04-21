@@ -39,6 +39,11 @@ public class CosmicSystem {
         return this.head == null ? null : head.getBody(body.getName());
     }
 
+    public int getDepth(String name) {
+        if (this.head == null || this.get(name) == null) return 0;
+        return this.head.depth(name, 1);
+    }
+
     // returns the number of entries of the list.
     public int size() {
         return this.head == null ? 0 : this.head.size();

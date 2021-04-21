@@ -1,29 +1,30 @@
-public class MyNode {
+public class MyComplexSystemNode {
+
     private Body data;
-    private MyNode nextNode;
-    private MyNode prevNode;
+    private MyComplexSystemNode nextNode;
+    private MyComplexSystemNode prevNode;
 
 
-    public MyNode(Body data) {
+    public MyComplexSystemNode(Body data) {
         this.data = data;
     }
 
-    public MyNode getNextNode() {return this.nextNode;}
-    public void setNextNode(MyNode node) {this.nextNode = node;}
-    public void setPrevNode(MyNode node) {this.prevNode = node;}
+    public MyComplexSystemNode getNextNode() {return this.nextNode;}
+    public void setNextNode(MyComplexSystemNode node) {this.nextNode = node;}
+    public void setPrevNode(MyComplexSystemNode node) {this.prevNode = node;}
 
     public boolean addNode(Body body) {
         if (body.getName().equals(this.data.getName())) return false;
         if (this.nextNode != null) return this.nextNode.addNode(body);
-        this.nextNode = new MyNode(body);
+        this.nextNode = new MyComplexSystemNode(body);
         this.nextNode.prevNode = this;
         return true;
     }
 
     public boolean addNode(int i, Body body) {
         if (i==1) {
-            MyNode buffer = this.nextNode;
-            this.nextNode = new MyNode(body);
+            MyComplexSystemNode buffer = this.nextNode;
+            this.nextNode = new MyComplexSystemNode(body);
             this.nextNode.nextNode = buffer;
             this.nextNode.prevNode = this;
             if (this.nextNode.nextNode != null)
@@ -74,4 +75,5 @@ public class MyNode {
     public String toString() {
         return this.nextNode == null ? this.data.toString() + "\n" : this.data.toString() + "\n" + this.nextNode.toString();
     }
+
 }
