@@ -4,49 +4,53 @@ import java.awt.*;
 public class ComplexCosmicSystem implements CosmicComponent {
 
     //TODO: Define variables.
+    private MyCosmicComponentNode head;
+    private String name;
 
     // Initialises this system as an empty system with a name.
     public ComplexCosmicSystem(String name) {
-        //TODO: implement constructor.
+        this.name = name;
     }
 
     // Adds 'comp' to the list of cosmic components of the system if the list does not already contain a
     // component with the same name as 'comp', otherwise does not change the object state. The method
     // returns 'true' if the list was changed as a result of the call and 'false' otherwise.
     public boolean add(CosmicComponent comp) {
-        //TODO: implement method.
-        return false;
+        if (this.head != null) return head.add(comp);
+        this.head = new MyCosmicComponentNode(comp);
+        return true;
     }
 
     //Removes a component from the list if the list contains a component with the same name as the input component.
     //Returns true if removal was done, and false otherwise (no component with the same name).
     public boolean remove(CosmicComponent comp) {
-        //TODO: implement method.
-        return false;
+        if (this.head == null) return false;
+        if (this.head.get(0).getName().equals(comp.getName())) {
+            this.head = this.head.getNextNode();
+            this.head.setPrevNode(null);
+            return true;
+        }
+        return this.head.remove(comp);
     }
 
     // Returns the CosmicComponent with the specified name or 'null' if no such component exists in the list.
     public CosmicComponent get(String name) {
-        //TODO: implement method.
-        return new Body("Dummy Body", 0, 0, new Vector3(0, 0, 0), new Vector3(0, 0, 0), Color.BLACK);
+        return this.head == null ? null : head.get(name);
     }
 
     // Returns the CosmicComponent with the same name as the input component or 'null' if no such CosmicComponent exists in the list.
     public CosmicComponent get(CosmicComponent c) {
-        //TODO: implement method.
-        return new Body("Dummy Body", 0, 0, new Vector3(0, 0, 0), new Vector3(0, 0, 0), Color.BLACK);
+        return this.head == null ? null : head.get(c.getName());
     }
 
     // Returns the name of this system.
     public String getName() {
-        //TODO: implement method.
-        return "";
+        return this.name;
     }
 
     // Returns the number of CosmicComponent entries of the list.
     public int size() {
-        //TODO: implement method.
-        return -1;
+        return this.head == null ? 0 : this.head.size();
     }
 
     // Returns a readable representation of the ComplexCosmicSystem.
@@ -58,8 +62,7 @@ public class ComplexCosmicSystem implements CosmicComponent {
     //
     //CONSTRAINT: use the concept of dynamic binding to fulfill this task, i.e. don't use type casts, getClass() or instanceOf().
     public String toString() {
-        //TODO: implement method.
-        return "";
+        return this.head == null ? this.getName() + "{}" : this.getName() + "{" + this.head.toString() + "}";
     }
 
     //Returns the overall number of bodies (i.e. objects of type 'Body') contained in the ComplexCosmicSystem.
@@ -67,8 +70,7 @@ public class ComplexCosmicSystem implements CosmicComponent {
     //
     //CONSTRAINT: use the concept of dynamic binding to fulfill this task, i.e. don't use type casts, getClass() or instanceOf().
     public int numberOfBodies() {
-        //TODO: implement method.
-        return -1;
+        return this.head == null ? 0 : this.head.numberOfBodies();
     }
 
     //Returns the overall mass (sum of all contained components).
@@ -76,8 +78,7 @@ public class ComplexCosmicSystem implements CosmicComponent {
     //
     //CONSTRAINT: use the concept of dynamic binding to fulfill this task, i.e. don't use type casts, getClass() or instanceOf().
     public double getMass() {
-        //TODO: implement method.
-        return -1.0;
+        return this.head == null ? 0.0 : this.head.getMass();
     }
 
     //Returns the gravitational center of this component (weighted average of contained components).
@@ -85,10 +86,6 @@ public class ComplexCosmicSystem implements CosmicComponent {
     //
     //CONSTRAINT: use the concept of dynamic binding to fulfill this task, i.e. don't use type casts, getClass() or instanceOf().
     public Vector3 getMassCenter() {
-        //TODO: implement method.
-        return new Vector3(-1.0, -1.0, 1.0);
+        return this.head == null ? new Vector3(0,0,0) : this.head.getMassCenter(new Vector3(0,0,0), 0);
     }
-
 }
-
-//TODO: Define additional class(es) implementing the double-linked list (either here or outside class).
