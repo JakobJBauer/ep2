@@ -4,8 +4,18 @@ public class CosmicSystem {
     private String name;
     private MyNode head;
 
+
     public String getName() {
         return this.name;
+    }
+
+    //    Implementieren Sie in der Klasse CosmicSystem eine Methode  public void retainEvenIndices(), die nur die Elemente
+    //    mit geraden Indizes in der Liste behält (also die Indizes 0, 2, 4, ...).
+    //    Hinweis: Die Methode soll die bestehende Liste verändern, es soll keine neue Liste erstellt werden.
+    public void retainEvenIndices() {
+        for (int i = this.size(); i > 0; i--) {
+            if (i%2!=0) this.remove(i);
+        }
     }
 
     // Initialises this system as an empty system with a name.

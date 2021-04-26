@@ -5,9 +5,7 @@ public class MyCosmicComponentNode {
     private MyCosmicComponentNode prevNode;
 
 
-    public MyCosmicComponentNode(CosmicComponent data) {
-        this.data = data;
-    }
+    public MyCosmicComponentNode(CosmicComponent data) {this.data = data;}
 
     public MyCosmicComponentNode getNextNode() {return this.nextNode;}
     public void setNextNode(MyCosmicComponentNode node) {this.nextNode = node;}
@@ -45,17 +43,11 @@ public class MyCosmicComponentNode {
         return this.nextNode == null ? 1 : 1 + this.nextNode.size();
     }
 
-    public String toString() {
-        return this.nextNode == null ? this.data.toString() : this.data.toString() + ", " + this.nextNode.toString();
-    }
+    public String toString() {return this.nextNode == null ? this.data.toString() : this.data.toString() + ", " + this.nextNode.toString();}
 
-    public int numberOfBodies() {
-        return this.nextNode == null ? this.data.numberOfBodies() : this.data.numberOfBodies() + this.nextNode.numberOfBodies();
-    }
+    public int numberOfBodies() {return this.nextNode == null ? this.data.numberOfBodies() : this.data.numberOfBodies() + this.nextNode.numberOfBodies();}
 
-    public double getMass() {
-        return this.nextNode == null ? this.data.getMass() : this.data.getMass() + this.nextNode.getMass();
-    }
+    public double getMass() {return this.nextNode == null ? this.data.getMass() : this.data.getMass() + this.nextNode.getMass();}
 
     public Vector3 getMassCenter(Vector3 massCenter, double mass) {
         Vector3 output = (massCenter.times(mass).plus(this.data.getMassCenter().times(this.data.getMass())).times(1/(mass + this.data.getMass())));

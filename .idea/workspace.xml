@@ -21,8 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Implemented drawMethod for the CosmicSystemTree">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ComplexCosmicSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComplexCosmicSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyComplexSystemNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyCosmicComponentNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aufgabe3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aufgabe3Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CosmicSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CosmicSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyCosmicComponentNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyCosmicComponentNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +76,7 @@
       <recent name="$PROJECT_DIR$/angabe" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Aufgabe4">
+  <component name="RunManager" selected="Application.Aufgabe3">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -200,7 +201,11 @@
       <workItem from="1618847903726" duration="1804000" />
       <workItem from="1618999137633" duration="962000" />
       <workItem from="1619172416727" duration="2354000" />
-      <workItem from="1619181940058" duration="1755000" />
+      <workItem from="1619181940058" duration="1892000" />
+      <workItem from="1619205832122" duration="269000" />
+      <workItem from="1619206732577" duration="2132000" />
+      <workItem from="1619430482145" duration="1083000" />
+      <workItem from="1619453183500" duration="1261000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -349,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619000093861</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Implemented ComplexCosmicSystem">
+      <created>1619183755694</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1619183755694</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +404,8 @@
     <MESSAGE value="Fixed bugs" />
     <MESSAGE value="Added force  variable to Body&#10;Changed Simulation.java and Body.java to use the new force variable" />
     <MESSAGE value="Created new Class MyComplexSystemNode&#10;Implemented Interface ComplexSystem into Body.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created new Class MyComplexSystemNode&#10;Implemented Interface ComplexSystem into Body.java" />
+    <MESSAGE value="Implemented ComplexCosmicSystem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented ComplexCosmicSystem" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1036" y="273" width="789" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619182092624">
@@ -417,26 +430,26 @@
       <screen x="0" y="0" width="3440" height="1410" />
     </state>
     <state x="2100" y="476" key="FileChooserDialogImpl/0.0.3440.1410@0.0.3440.1410" timestamp="1616368515714" />
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1619183661157">
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1619456319733">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1619183661157" />
-    <state width="1674" height="391" key="GridCell.Tab.0.bottom/0.0.3440.1410@0.0.3440.1410" timestamp="1616969030689" />
-    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1619183661157">
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1619456319733" />
+    <state width="3397" height="396" key="GridCell.Tab.0.bottom/0.0.3440.1410@0.0.3440.1410" timestamp="1619206103337" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1619456319733">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1619183661157" />
-    <state width="1674" height="391" key="GridCell.Tab.0.center/0.0.3440.1410@0.0.3440.1410" timestamp="1616969030688" />
-    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1619183661156">
+    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1619456319733" />
+    <state width="3397" height="396" key="GridCell.Tab.0.center/0.0.3440.1410@0.0.3440.1410" timestamp="1619206103337" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1619456319732">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1619183661156" />
-    <state width="1674" height="391" key="GridCell.Tab.0.left/0.0.3440.1410@0.0.3440.1410" timestamp="1616969030688" />
-    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1619183661157">
+    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1619456319732" />
+    <state width="3397" height="396" key="GridCell.Tab.0.left/0.0.3440.1410@0.0.3440.1410" timestamp="1619206103337" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1619456319733">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1619183661157" />
-    <state width="1674" height="391" key="GridCell.Tab.0.right/0.0.3440.1410@0.0.3440.1410" timestamp="1616969030689" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1619456319733" />
+    <state width="3397" height="396" key="GridCell.Tab.0.right/0.0.3440.1410@0.0.3440.1410" timestamp="1619206103337" />
     <state width="1877" height="351" key="GridCell.Tab.1.bottom" timestamp="1618437366578">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -457,15 +470,15 @@
       <screen x="0" y="0" width="3440" height="1410" />
     </state>
     <state x="795" y="376" key="SettingsEditor/0.0.3440.1410@0.0.3440.1410" timestamp="1615723518203" />
-    <state x="1104" y="331" key="Vcs.Push.Dialog.v2" timestamp="1618439772767">
+    <state x="1104" y="331" key="Vcs.Push.Dialog.v2" timestamp="1619183758967">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1104" y="331" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1618439772767" />
+    <state x="1104" y="331" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1619183758967" />
     <state x="1995" y="445" key="Vcs.Push.Dialog.v2/0.0.3440.1410@0.0.3440.1410" timestamp="1616435659292" />
-    <state x="1239" y="466" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618999142189">
+    <state x="1239" y="466" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619453310587">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1239" y="466" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1618999142189" />
+    <state x="1239" y="466" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1619453310587" />
     <state x="2220" y="626" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3440.1410@0.0.3440.1410" timestamp="1616963525459" />
     <state x="1077" y="202" width="758" height="710" key="dock-window-1" timestamp="1618260514070">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -478,15 +491,6 @@
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1619172936863" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Aufgabe3Test.java</url>
-          <line>96</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="xDraw - barWidth / 2" language="JAVA" />
