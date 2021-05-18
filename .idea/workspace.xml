@@ -21,9 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Implemented drawMethod for the CosmicSystemTree">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Aufgabe3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aufgabe3Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CosmicSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CosmicSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyCosmicComponentNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyCosmicComponentNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,7 @@
       <recent name="$PROJECT_DIR$/angabe" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Aufgabe3">
+  <component name="RunManager" selected="Application.Simulation">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -136,6 +133,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -171,8 +179,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Aufgabe2Test" />
         <item itemvalue="Application.Simulation" />
+        <item itemvalue="Application.Aufgabe2Test" />
         <item itemvalue="Application.Aufgabe2" />
         <item itemvalue="Application.Aufgabe3" />
         <item itemvalue="Application.Aufgabe1" />
@@ -205,7 +213,12 @@
       <workItem from="1619205832122" duration="269000" />
       <workItem from="1619206732577" duration="2132000" />
       <workItem from="1619430482145" duration="1083000" />
-      <workItem from="1619453183500" duration="1261000" />
+      <workItem from="1619453183500" duration="3207000" />
+      <workItem from="1619516991581" duration="596000" />
+      <workItem from="1619555760651" duration="329000" />
+      <workItem from="1619690043819" duration="423000" />
+      <workItem from="1619998853565" duration="447000" />
+      <workItem from="1620056648941" duration="1390000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -361,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619183755694</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Übungstest Lösung">
+      <created>1619456382494</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1619456382494</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +425,8 @@
     <MESSAGE value="Added force  variable to Body&#10;Changed Simulation.java and Body.java to use the new force variable" />
     <MESSAGE value="Created new Class MyComplexSystemNode&#10;Implemented Interface ComplexSystem into Body.java" />
     <MESSAGE value="Implemented ComplexCosmicSystem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented ComplexCosmicSystem" />
+    <MESSAGE value="Übungstest Lösung" />
+    <option name="LAST_COMMIT_MESSAGE" value="Übungstest Lösung" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1036" y="273" width="789" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619182092624">
@@ -470,10 +491,10 @@
       <screen x="0" y="0" width="3440" height="1410" />
     </state>
     <state x="795" y="376" key="SettingsEditor/0.0.3440.1410@0.0.3440.1410" timestamp="1615723518203" />
-    <state x="1104" y="331" key="Vcs.Push.Dialog.v2" timestamp="1619183758967">
+    <state x="462" y="259" key="Vcs.Push.Dialog.v2" timestamp="1619456386433">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1104" y="331" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1619183758967" />
+    <state x="462" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1619456386433" />
     <state x="1995" y="445" key="Vcs.Push.Dialog.v2/0.0.3440.1410@0.0.3440.1410" timestamp="1616435659292" />
     <state x="1239" y="466" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619453310587">
       <screen x="0" y="0" width="1920" height="1050" />
