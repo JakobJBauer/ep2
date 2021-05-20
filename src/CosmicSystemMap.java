@@ -3,8 +3,8 @@ import java.util.HashMap;
 // define class
 public class CosmicSystemMap implements CosmicSystemIndex {
 
-    private Body[] ks = new Body[50];
-    private ComplexCosmicSystem[] vs = new ComplexCosmicSystem[50];
+    private Body[] ks = new Body[65];
+    private ComplexCosmicSystem[] vs = new ComplexCosmicSystem[65];
     int count = 0;
 
     // Creates a hash map from the specified 'system'.
@@ -28,6 +28,15 @@ public class CosmicSystemMap implements CosmicSystemIndex {
         return ks[this.find((b))] != null;
     }
 
+    @Override
+    public String toString() {
+        String out = "";
+        for (Body body: ks) {
+            if (body != null) out += body.toString() + "\n";
+        }
+        return out;
+    }
+
     private int find(Body k) {
         if (k == null) {
             return ks.length - 1;
@@ -42,7 +51,6 @@ public class CosmicSystemMap implements CosmicSystemIndex {
     private void put(Body key, ComplexCosmicSystem value) {
         if (key == null) return;
         int i = find(key);
-        ComplexCosmicSystem old = vs[i];
         vs[i] = value;
         if (ks[i] == null) {
             ks[i] = key;
