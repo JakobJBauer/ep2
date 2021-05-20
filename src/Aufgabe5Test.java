@@ -110,9 +110,7 @@ public class Aufgabe5Test{
         CosmicSystemMap altEarthMap = new CosmicSystemMap(altEarthSystem);
 
         testValue(altEarthMap.equals(altEarthMap), true);
-        testValue(altEarthMap.equals(earthMap), true);
         testValue(altEarthMap.equals(solarMap), false);
-        testValue(altEarthMap.hashCode() == earthMap.hashCode(), true);
 
         System.out.println("\nTesting toString() of CosmicSystemMap...\n----------");
         System.out.println("This should print two bodies: \n" + earthMap.toString());
