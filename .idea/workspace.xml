@@ -21,9 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Implemented drawMethod for the CosmicSystemTree">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Aufgabe5Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aufgabe5Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ComplexCosmicSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComplexCosmicSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CosmicSystemMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CosmicSystemMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyCosmicComponentNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyCosmicComponentNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +80,7 @@
       <recent name="$PROJECT_DIR$/angabe" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Simulation">
+  <component name="RunManager" selected="Application.Aufgabe5Test">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -125,6 +123,14 @@
     <configuration name="Aufgabe4" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Aufgabe4Test" />
       <module name="Aufgabenblatt1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Aufgabe5Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Aufgabe5Test" />
+      <module name="Aufgabenblatt1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -187,14 +193,15 @@
       <item itemvalue="Application.Aufgabe2" />
       <item itemvalue="Application.Aufgabe2Test" />
       <item itemvalue="Application.Simulation" />
+      <item itemvalue="Application.Aufgabe5Test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Aufgabe5Test" />
         <item itemvalue="Application.Simulation" />
         <item itemvalue="Application.Aufgabe2Test" />
         <item itemvalue="Application.Aufgabe2" />
         <item itemvalue="Application.Aufgabe3" />
-        <item itemvalue="Application.Aufgabe1" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +237,7 @@
       <workItem from="1619690043819" duration="423000" />
       <workItem from="1619998853565" duration="447000" />
       <workItem from="1620056648941" duration="1390000" />
-      <workItem from="1621391236763" duration="9735000" />
+      <workItem from="1621391236763" duration="12079000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -414,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621476254262</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Solved Task 3">
+      <created>1621479149227</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1621479149227</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +450,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../../.." />
     </ignored-roots>
-    <MESSAGE value="Autochanges from IntelliJ" />
     <MESSAGE value="Added connect functionality for bodys and used them on mercury and earth" />
     <MESSAGE value="Added getName() Method" />
     <MESSAGE value="Added LinkedList &quot;CosmicSystem&quot; with add, get and size functions" />
@@ -461,7 +474,8 @@
     <MESSAGE value="Added subtask 1" />
     <MESSAGE value="Changed old version" />
     <MESSAGE value="Solved Task 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solved Task 2" />
+    <MESSAGE value="Solved Task 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solved Task 3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1036" y="273" width="789" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619182092624">
@@ -488,26 +502,26 @@
     </state>
     <state x="1172" y="354" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1621322907454" />
     <state x="2100" y="476" key="FileChooserDialogImpl/0.0.3440.1410@0.0.3440.1410" timestamp="1616368515714" />
-    <state width="1674" height="279" key="GridCell.Tab.0.bottom" timestamp="1621322909199">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1676" height="401" key="GridCell.Tab.0.bottom" timestamp="1621481384632">
+      <screen x="0" y="0" width="3440" height="1410" />
     </state>
     <state width="1674" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1621322909199" />
-    <state width="3397" height="396" key="GridCell.Tab.0.bottom/0.0.3440.1410@0.0.3440.1410" timestamp="1619206103337" />
-    <state width="1674" height="279" key="GridCell.Tab.0.center" timestamp="1621322909198">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1676" height="401" key="GridCell.Tab.0.bottom/0.0.3440.1410@0.0.3440.1410" timestamp="1621481384632" />
+    <state width="1676" height="401" key="GridCell.Tab.0.center" timestamp="1621481384632">
+      <screen x="0" y="0" width="3440" height="1410" />
     </state>
     <state width="1674" height="279" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1621322909198" />
-    <state width="3397" height="396" key="GridCell.Tab.0.center/0.0.3440.1410@0.0.3440.1410" timestamp="1619206103337" />
-    <state width="1674" height="279" key="GridCell.Tab.0.left" timestamp="1621322909198">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1676" height="401" key="GridCell.Tab.0.center/0.0.3440.1410@0.0.3440.1410" timestamp="1621481384632" />
+    <state width="1676" height="401" key="GridCell.Tab.0.left" timestamp="1621481384632">
+      <screen x="0" y="0" width="3440" height="1410" />
     </state>
     <state width="1674" height="279" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1621322909198" />
-    <state width="3397" height="396" key="GridCell.Tab.0.left/0.0.3440.1410@0.0.3440.1410" timestamp="1619206103337" />
-    <state width="1674" height="279" key="GridCell.Tab.0.right" timestamp="1621322909199">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1676" height="401" key="GridCell.Tab.0.left/0.0.3440.1410@0.0.3440.1410" timestamp="1621481384632" />
+    <state width="1676" height="401" key="GridCell.Tab.0.right" timestamp="1621481384632">
+      <screen x="0" y="0" width="3440" height="1410" />
     </state>
     <state width="1674" height="279" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1621322909199" />
-    <state width="3397" height="396" key="GridCell.Tab.0.right/0.0.3440.1410@0.0.3440.1410" timestamp="1619206103337" />
+    <state width="1676" height="401" key="GridCell.Tab.0.right/0.0.3440.1410@0.0.3440.1410" timestamp="1621481384632" />
     <state width="1877" height="351" key="GridCell.Tab.1.bottom" timestamp="1618437366578">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -528,11 +542,11 @@
       <screen x="0" y="0" width="3440" height="1410" />
     </state>
     <state x="795" y="376" key="SettingsEditor/0.0.3440.1410@0.0.3440.1410" timestamp="1615723518203" />
-    <state x="462" y="259" key="Vcs.Push.Dialog.v2" timestamp="1619456386433">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="1995" y="445" key="Vcs.Push.Dialog.v2" timestamp="1621479151436">
+      <screen x="0" y="0" width="3440" height="1410" />
     </state>
     <state x="462" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1619456386433" />
-    <state x="1995" y="445" key="Vcs.Push.Dialog.v2/0.0.3440.1410@0.0.3440.1410" timestamp="1616435659292" />
+    <state x="1995" y="445" key="Vcs.Push.Dialog.v2/0.0.3440.1410@0.0.3440.1410" timestamp="1621479151436" />
     <state x="2220" y="626" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621471305430">
       <screen x="0" y="0" width="3440" height="1410" />
     </state>

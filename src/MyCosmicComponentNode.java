@@ -61,12 +61,24 @@ public class MyCosmicComponentNode {
         return this.nextNode == null ? Objects.hash(data) : Objects.hash(data) + this.nextNode.hashCode();
     }
 
+    public ComplexCosmicSystem getParent(ComplexCosmicSystem currentSystem, Body b) {
+        if (this.data.equals((b))) return currentSystem;
+        if (this.data.getClass() == currentSystem.getClass()) {
+            ComplexCosmicSystem newSystem = (ComplexCosmicSystem) this.data;
+            if (newSystem.getParent(b) != null) return newSystem.getParent(b);
+        }
+        if (this.nextNode == null) return null;
+        return this.nextNode.getParent(currentSystem, b);
+    }
+
     public boolean contains(CosmicComponent x) {
         return this.nextNode == null ? this.data.equals(x) : this.data.equals(x) || this.nextNode.contains(x);
     }
 
     public Body[] getBodies() {
-        return this.concatenate(this.data.getBodies(), this.nextNode.getBodies());
+        if (this.nextNode != null)
+            return this.concatenate(this.data.getBodies(), this.nextNode.getBodies());
+        return this.data.getBodies();
     }
 
     private Body[] concatenate(Body[] a, Body[] b) {
