@@ -10,4 +10,6 @@ public interface CosmicComponent {
 
     //Returns the gravitational center of this component (weighted average of contained components).
     Vector3 getMassCenter();
+
+    Body[] getBodies();
 }

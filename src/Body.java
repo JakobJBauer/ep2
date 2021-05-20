@@ -115,6 +115,10 @@ public class Body implements CosmicComponent {
         StdDraw.line(this.position.getX(), this.position.getY(), body.position.getX(), body.position.getY());
     }
 
+    public Body[] getBodies() {
+        return new Body[]{this};
+    }
+
 }
 
 

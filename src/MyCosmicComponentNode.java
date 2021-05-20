@@ -1,3 +1,6 @@
+import javax.print.attribute.standard.JobKOctets;
+import java.util.Objects;
+
 public class MyCosmicComponentNode {
 
     private CosmicComponent data;
@@ -8,7 +11,7 @@ public class MyCosmicComponentNode {
     public MyCosmicComponentNode(CosmicComponent data) {this.data = data;}
 
     public MyCosmicComponentNode getNextNode() {return this.nextNode;}
-    public void setNextNode(MyCosmicComponentNode node) {this.nextNode = node;}
+    public CosmicComponent getData() {return this.data;}
     public void setPrevNode(MyCosmicComponentNode node) {this.prevNode = node;}
 
     public boolean add(CosmicComponent component) {
@@ -28,21 +31,11 @@ public class MyCosmicComponentNode {
         return this.nextNode != null && this.nextNode.remove(component);
     }
 
-    public CosmicComponent get(String name) {
-        if (this.data.getName().equals(name)) return this.data;
-        return this.nextNode == null ? null : this.nextNode.get(name);
-    }
-
-    // Helping Method
-    public CosmicComponent get(int i) {
-        if (i != 0 && this.nextNode == null)  return null;
-        return i==0 ? this.data : this.nextNode.get(--i);
-    }
-
     public int size() {
         return this.nextNode == null ? 1 : 1 + this.nextNode.size();
     }
 
+    @Override
     public String toString() {return this.nextNode == null ? this.data.toString() : this.data.toString() + ", " + this.nextNode.toString();}
 
     public int numberOfBodies() {return this.nextNode == null ? this.data.numberOfBodies() : this.data.numberOfBodies() + this.nextNode.numberOfBodies();}
@@ -54,5 +47,32 @@ public class MyCosmicComponentNode {
         if (this.nextNode != null)
             output = this.nextNode.getMassCenter(output, mass + this.data.getMass());
         return output;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        MyCosmicComponentNode head = (MyCosmicComponentNode) o;
+        return this.nextNode == null ? head.contains(this.data) : head.contains(this.data) && this.nextNode.equals(o);
+    }
+
+    @Override
+    public int hashCode() {         // what is the order of hashing?
+        return this.nextNode == null ? Objects.hash(data) : Objects.hash(data, nextNode.data);
+    }
+
+    public boolean contains(CosmicComponent x) {
+        return this.nextNode == null ? this.data.equals(x) : this.data.equals(x) || this.nextNode.contains(x);
+    }
+
+    public Body[] getBodies() {
+        return this.concatenate(this.data.getBodies(), this.nextNode.getBodies());
+    }
+
+    private Body[] concatenate(Body[] a, Body[] b) {
+        Body[] out = new Body[a.length + b.length];
+        System.arraycopy(a, 0, out, 0, a.length);
+        System.arraycopy(b, 0, out, a.length, b.length);
+        return out;
     }
 }

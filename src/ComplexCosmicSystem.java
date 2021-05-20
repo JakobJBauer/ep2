@@ -1,16 +1,20 @@
 import java.awt.*;
+import java.util.Objects;
 
 //This class represents a double-linked list for objects of class 'CosmicComponent'.
-public class ComplexCosmicSystem implements CosmicComponent {
+public class ComplexCosmicSystem implements CosmicComponent, BodyIterable, CosmicSystemIndex {
 
-    //TODO: Define variables.
     private MyCosmicComponentNode head;
     private String name;
 
-    // Initialises this system as an empty system with a name.
-    public ComplexCosmicSystem(String name) {
+    // Initialises this system with a name and at least two cosmic components.
+    public ComplexCosmicSystem(String name, CosmicComponent c1, CosmicComponent c2, CosmicComponent... ci) {
         this.name = name;
+        this.add(c1);
+        this.add(c2);
+        for (CosmicComponent comp: ci) this.add(comp);
     }
+
 
     // Adds 'comp' to the list of cosmic components of the system if the list does not already contain a
     // component with the same name as 'comp', otherwise does not change the object state. The method
@@ -25,22 +29,12 @@ public class ComplexCosmicSystem implements CosmicComponent {
     //Returns true if removal was done, and false otherwise (no component with the same name).
     public boolean remove(CosmicComponent comp) {
         if (this.head == null) return false;
-        if (this.head.get(0).getName().equals(comp.getName())) {
+        if (this.head.getData().getName().equals(comp.getName())) {
             this.head = this.head.getNextNode();
             this.head.setPrevNode(null);
             return true;
         }
         return this.head.remove(comp);
-    }
-
-    // Returns the CosmicComponent with the specified name or 'null' if no such component exists in the list.
-    public CosmicComponent get(String name) {
-        return this.head == null ? null : head.get(name);
-    }
-
-    // Returns the CosmicComponent with the same name as the input component or 'null' if no such CosmicComponent exists in the list.
-    public CosmicComponent get(CosmicComponent c) {
-        return this.head == null ? null : head.get(c.getName());
     }
 
     // Returns the name of this system.
@@ -61,8 +55,22 @@ public class ComplexCosmicSystem implements CosmicComponent {
     //An empty system is indicated by empty brackets, e.g. "Jupiter System{}"
     //
     //CONSTRAINT: use the concept of dynamic binding to fulfill this task, i.e. don't use type casts, getClass() or instanceOf().
+    @Override
     public String toString() {
         return this.head == null ? this.getName() + "{}" : this.getName() + "{" + this.head.toString() + "}";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ComplexCosmicSystem system = (ComplexCosmicSystem) o;
+        return this.head.size() == system.size() && this.head.equals(system.head);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(head.hashCode());
     }
 
     //Returns the overall number of bodies (i.e. objects of type 'Body') contained in the ComplexCosmicSystem.
@@ -71,6 +79,10 @@ public class ComplexCosmicSystem implements CosmicComponent {
     //CONSTRAINT: use the concept of dynamic binding to fulfill this task, i.e. don't use type casts, getClass() or instanceOf().
     public int numberOfBodies() {
         return this.head == null ? 0 : this.head.numberOfBodies();
+    }
+
+    public Body[] getBodies() {
+        return this.head.getBodies();
     }
 
     //Returns the overall mass (sum of all contained components).
@@ -87,5 +99,39 @@ public class ComplexCosmicSystem implements CosmicComponent {
     //CONSTRAINT: use the concept of dynamic binding to fulfill this task, i.e. don't use type casts, getClass() or instanceOf().
     public Vector3 getMassCenter() {
         return this.head == null ? new Vector3(0,0,0) : this.head.getMassCenter(new Vector3(0,0,0), 0);
+    }
+
+    @Override
+    public BodyIterator iterator() {
+        return new ComplexCosmicSystemIterator(this.head);
+    }
+
+    @Override
+    public ComplexCosmicSystem getParent(Body b) {
+        return null;
+    }
+
+    @Override
+    public boolean contains(Body b) {
+        return this.head.contains(b);
+    }
+}
+
+
+class ComplexCosmicSystemIterator implements BodyIterator {
+    Body[] bodies;
+    int index = 0;
+    public ComplexCosmicSystemIterator (MyCosmicComponentNode head) {
+        this.bodies = head.getBodies();
+    }
+
+    @Override
+    public boolean hasNext() {
+        return this.index < this.bodies.length;
+    }
+
+    @Override
+    public Body next() {
+        return this.bodies[index++];
     }
 }
