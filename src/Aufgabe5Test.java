@@ -3,7 +3,6 @@ import java.awt.*;
 public class Aufgabe5Test{
 
     public static void main(String[] args) {
-
         System.out.println("\nIt is expected that add() works...\n----------");
         Body jupiter = new Body("Jupiter", 1.898e27, 69911e3, new Vector3(0, 0, 0),
                 new Vector3(0, 0, 0), Color.ORANGE);

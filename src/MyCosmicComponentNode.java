@@ -58,7 +58,7 @@ public class MyCosmicComponentNode {
 
     @Override
     public int hashCode() {         // what is the order of hashing?
-        return this.nextNode == null ? Objects.hash(data) : Objects.hash(data, nextNode.data);
+        return this.nextNode == null ? Objects.hash(data) : Objects.hash(data) + this.nextNode.hashCode();
     }
 
     public boolean contains(CosmicComponent x) {

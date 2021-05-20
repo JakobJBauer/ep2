@@ -108,7 +108,15 @@ public class ComplexCosmicSystem implements CosmicComponent, BodyIterable, Cosmi
 
     @Override
     public ComplexCosmicSystem getParent(Body b) {
-        return null;
+        ComplexCosmicSystem buffer = this;
+        MyCosmicComponentNode node = this.head;
+        while (node != null) {
+            if (node.getData().getClass() == this.getClass()) buffer = (ComplexCosmicSystem) node.getData();
+            else if (node.getData().equals(b)) return buffer;
+            node = node.getNextNode();
+        }
+        CosmicSystemMap map = new CosmicSystemMap(this);
+        return buffer;
     }
 
     @Override
