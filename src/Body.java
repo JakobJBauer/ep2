@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.Objects;
 
 // This class represents celestial bodies like stars, planets, asteroids, etc..
 public class Body implements CosmicComponent {
@@ -83,8 +84,23 @@ public class Body implements CosmicComponent {
     // Returns a string with the information about this body including
     // name, mass, radius, position and current movement. Example:
     // "Earth, 5.972E24 kg, radius: 6371000.0 m, position: [1.48E11,0.0,0.0] m, movement: [0.0,29290.0,0.0] m/s."
+    @Override
     public String toString() {
         return this.name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        double epsilon = 0.000001;
+        Body body = (Body) o;
+        return this.name.equals(body.name) && this.mass <= body.mass + epsilon && this.mass >= body.mass - epsilon;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.name, this.mass);
     }
 
     // Draws the body to the current StdDraw canvas as a dot using 'color' of this body.
