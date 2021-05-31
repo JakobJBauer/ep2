@@ -23,10 +23,13 @@ public class CosmicSystemMap implements CosmicSystemIndex {
         int[] hashes = new int[65];
         int index = 0;
         for (ComplexCosmicSystem cur: this.vs) {
+            if (cur == null) continue;
             int currHash = cur.hashCode();
             if (this.contains(hashes, currHash)) counter++;
-            hashes[index] = currHash;
-            index++;
+            else {
+                hashes[index] = currHash;
+                index++;
+            }
         }
         return counter;
     }

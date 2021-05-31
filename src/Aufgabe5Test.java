@@ -3,6 +3,21 @@ import java.awt.*;
 public class Aufgabe5Test{
 
     public static void main(String[] args) {
+        // Test
+        Body testBody1 = new Body("TestBody", 1.898e27, 69911e3, new Vector3(0, 0, 0),
+                new Vector3(0, 0, 0), Color.ORANGE);
+        Body testBody2 = new Body("TestBody", 1.898e27, 69911e3, new Vector3(0, 0, 0),
+                new Vector3(0, 0, 0), Color.ORANGE);
+        Body testBody3 = new Body("TestBody", 1.898e27, 69911e3, new Vector3(0, 0, 0),
+                new Vector3(0, 0, 0), Color.ORANGE);
+        ComplexCosmicSystem testSystem = new ComplexCosmicSystem("Earth System", testBody1, testBody2, testBody3);
+        // 3 collisions
+
+        var map = new CosmicSystemMap(testSystem);
+        System.out.println("map.countCollisions() = " + map.countCollisions());
+        // Test End
+
+
         System.out.println("\nIt is expected that add() works...\n----------");
         Body jupiter = new Body("Jupiter", 1.898e27, 69911e3, new Vector3(0, 0, 0),
                 new Vector3(0, 0, 0), Color.ORANGE);
