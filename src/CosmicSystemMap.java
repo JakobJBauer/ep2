@@ -18,6 +18,26 @@ public class CosmicSystemMap implements CosmicSystemIndex {
         }
     }
 
+    public int countCollisions() {
+        int counter = 0;
+        int[] hashes = new int[65];
+        int index = 0;
+        for (ComplexCosmicSystem cur: this.vs) {
+            int currHash = cur.hashCode();
+            if (this.contains(hashes, currHash)) counter++;
+            hashes[index] = currHash;
+            index++;
+        }
+        return counter;
+    }
+
+    private boolean contains(int[] values, int key) {
+        for (int i = 0; i < values.length; i++) {
+            if (values[i] == key) return true;
+        }
+        return false;
+    }
+
     @Override
     public ComplexCosmicSystem getParent(Body b) {
         return vs[this.find(b)];
@@ -30,11 +50,11 @@ public class CosmicSystemMap implements CosmicSystemIndex {
 
     @Override
     public String toString() {
-        String out = "";
+        StringBuilder out = new StringBuilder();
         for (Body body: ks) {
-            if (body != null) out += body.toString() + "\n";
+            if (body != null) out.append(body.toString()).append("\n");
         }
-        return out;
+        return out.toString();
     }
 
     private int find(Body k) {

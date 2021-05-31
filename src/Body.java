@@ -100,7 +100,7 @@ public class Body implements CosmicComponent {
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.name, this.mass);
+        return Objects.hash(this.name, (int)this.mass);
     }
 
     // Draws the body to the current StdDraw canvas as a dot using 'color' of this body.
