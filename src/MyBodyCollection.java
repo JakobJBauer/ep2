@@ -40,15 +40,12 @@ public class MyBodyCollection implements BodyCollection {
 
     public boolean isEqualTo(CosmicSystemIndex index) {
         BodyCollection sysBodyC = index.getBodies();
-
         if (sysBodyC.size() != this.size()) return false;
 
-        boolean equal = true;
-
         for (Body b : this.toArray()){
-            equal = equal && sysBodyC.contains(b);
+            if (!sysBodyC.contains(b)) return false;
         }
 
-        return equal;
+        return true;
     }
 }
