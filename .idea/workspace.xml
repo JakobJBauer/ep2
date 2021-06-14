@@ -20,16 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Implemented drawMethod for the CosmicSystemTree">
-      <change afterPath="$PROJECT_DIR$/src/MyBodyCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Aufgabe5Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aufgabe5Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BodyIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BodyIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ComplexCosmicSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComplexCosmicSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CosmicComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CosmicComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CosmicSystemIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CosmicSystemIndex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CosmicSystemMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CosmicSystemMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyCosmicComponentNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyCosmicComponentNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReadDataUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReadDataUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyBodyCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyBodyCollection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,6 +228,7 @@
       <workItem from="1623082776206" duration="1219000" />
       <workItem from="1623590039911" duration="11869000" />
       <workItem from="1623646652874" duration="3103000" />
+      <workItem from="1623688531184" duration="1285000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>

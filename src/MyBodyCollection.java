@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MyBodyCollection implements BodyCollection {
 
     private ComplexCosmicSystem system;
@@ -34,5 +36,19 @@ public class MyBodyCollection implements BodyCollection {
     @Override
     public BodyIterator iterator() {
         return this.system.iterator();
+    }
+
+    public boolean isEqualTo(CosmicSystemIndex index) {
+        BodyCollection sysBodyC = index.getBodies();
+
+        if (sysBodyC.size() != this.size()) return false;
+
+        boolean equal = true;
+
+        for (Body b : this.toArray()){
+            equal = equal && sysBodyC.contains(b);
+        }
+
+        return equal;
     }
 }
