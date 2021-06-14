@@ -40,10 +40,9 @@ public class ReadDataUtil {
     // thrown. If it does not comply with the format described above, the method throws an
     // exception of the class 'StateFileFormatException'. Both exceptions are subtypes of 'IOException'.
     public static boolean readConfiguration(Body b, String path, String day) throws IOException {
-
-            //TODO: implement method
-            return false;
-
+        var r = new FileReader(path);
+        var reader = new BufferedReader(r);
+        return true;
     }
 
 }

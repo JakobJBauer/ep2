@@ -14,4 +14,10 @@ public interface CosmicSystemIndex {
     // in the index.
     boolean contains(Body b);
 
+    // Returns a collection view of all `Body`-Objects listed in this
+    // index (i.e. the set of keys). Subsequent changes in `this` will be
+    // reflected in the returned collection view.
+    BodyCollection getBodies();
+
+
 }

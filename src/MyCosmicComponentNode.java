@@ -75,12 +75,6 @@ public class MyCosmicComponentNode {
         return this.nextNode == null ? this.data.equals(x) : this.data.equals(x) || this.nextNode.contains(x);
     }
 
-    public Body[] getBodies() {
-        if (this.nextNode != null)
-            return this.concatenate(this.data.getBodies(), this.nextNode.getBodies());
-        return this.data.getBodies();
-    }
-
     private Body[] concatenate(Body[] a, Body[] b) {
         Body[] out = new Body[a.length + b.length];
         System.arraycopy(a, 0, out, 0, a.length);

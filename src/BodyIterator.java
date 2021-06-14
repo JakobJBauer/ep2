@@ -7,4 +7,8 @@ public interface BodyIterator extends java.util.Iterator<Body> {
     // Returns the next element (i.e. body) in the iteration.
     Body next();
 
+    // Removes the element last iterated
+    @Override
+    void remove();
+
 }

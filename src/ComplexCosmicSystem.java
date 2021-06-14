@@ -1,4 +1,4 @@
-import java.awt.*;
+import java.util.NoSuchElementException;
 import java.util.Objects;
 
 //This class represents a double-linked list for objects of class 'CosmicComponent'.
@@ -81,8 +81,8 @@ public class ComplexCosmicSystem implements CosmicComponent, BodyIterable, Cosmi
         return this.head == null ? 0 : this.head.numberOfBodies();
     }
 
-    public Body[] getBodies() {
-        return this.head.getBodies();
+    public BodyCollection getBodies() {
+        return new MyBodyCollection(this);
     }
 
     //Returns the overall mass (sum of all contained components).
@@ -113,28 +113,51 @@ public class ComplexCosmicSystem implements CosmicComponent, BodyIterable, Cosmi
 
     @Override
     public boolean contains(Body b) {
-        for (Body x: this.head.getBodies()) {
-            if (x.equals(b)) return true;
-        };
-        return false;
+        return this.head.contains(b);
     }
 }
 
 
 class ComplexCosmicSystemIterator implements BodyIterator {
-    Body[] bodies;
-    int index = 0;
+    private MyCosmicComponentNode currNode;
+    private ComplexCosmicSystemIterator nestedIter;
     public ComplexCosmicSystemIterator (MyCosmicComponentNode head) {
-        this.bodies = head.getBodies();
+        this.currNode = head;
     }
 
     @Override
     public boolean hasNext() {
-        return this.index < this.bodies.length;
+        return this.currNode != null || this.nestedIter != null && this.nestedIter.hasNext();
     }
 
     @Override
     public Body next() {
-        return this.bodies[index++];
+        if (!this.hasNext()){
+            throw new NoSuchElementException();
+        }
+        Body body = null;
+        if (this.currNode == null) {
+            return this.nestedIter.next();
+        }
+        var comp = this.currNode.getData();
+        if (comp.getClass() == Body.class)
+            body = (Body)comp;
+        else if (comp.getClass() == ComplexCosmicSystem.class){
+            this.nestedIter = (ComplexCosmicSystemIterator) ((ComplexCosmicSystem) comp).iterator();
+            body = this.nestedIter.next();
+        }
+        this.currNode = this.currNode.getNextNode();
+
+        return body;
+    }
+
+    @Override
+    public void remove() {
+        if (this.currNode == null && (this.nestedIter == null || !this.nestedIter.hasNext()))
+            throw new IllegalStateException("Call Iterator.next() before calling Iterator.remove()");
+        if (this.currNode != null)
+            this.currNode.remove(this.currNode.getData());
+        else
+            this.nestedIter.remove();
     }
 }

@@ -3,6 +3,7 @@ import java.util.HashMap;
 // define class
 public class CosmicSystemMap implements CosmicSystemIndex {
 
+    private ComplexCosmicSystem system;
     private Body[] ks = new Body[65];
     private ComplexCosmicSystem[] vs = new ComplexCosmicSystem[65];
     int count = 0;
@@ -13,6 +14,7 @@ public class CosmicSystemMap implements CosmicSystemIndex {
     // to the system (only the direct parent) to which the body belongs.
 
     public CosmicSystemMap(ComplexCosmicSystem system) {
+        this.system = system;
         for (Body body: system) {
             this.put(body, system.getParent(body));
         }
@@ -35,8 +37,8 @@ public class CosmicSystemMap implements CosmicSystemIndex {
     }
 
     private boolean contains(int[] values, int key) {
-        for (int i = 0; i < values.length; i++) {
-            if (values[i] == key) return true;
+        for (int value : values) {
+            if (value == key) return true;
         }
         return false;
     }
@@ -49,6 +51,11 @@ public class CosmicSystemMap implements CosmicSystemIndex {
     @Override
     public boolean contains(Body b) {
         return ks[this.find((b))] != null;
+    }
+
+    @Override
+    public BodyCollection getBodies() {
+        return new MyBodyCollection(this.system);
     }
 
     @Override

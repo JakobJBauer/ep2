@@ -10,10 +10,13 @@ public class Aufgabe5Test{
                 new Vector3(0, 0, 0), Color.ORANGE);
         Body testBody3 = new Body("TestBody", 1.898e27, 69911e3, new Vector3(0, 0, 0),
                 new Vector3(0, 0, 0), Color.ORANGE);
-        ComplexCosmicSystem testSystem = new ComplexCosmicSystem("Earth System", testBody1, testBody2, testBody3);
+        Body testBody4 = new Body("TestBody", 1.898e26, 6991e3, new Vector3(0, 0, 0),
+                new Vector3(0, 0, 0), Color.ORANGE);
+        ComplexCosmicSystem testSystem = new ComplexCosmicSystem("Earth System", testBody1, testBody2, testBody3, testBody4);
         // 3 collisions
 
         var map = new CosmicSystemMap(testSystem);
+        System.out.println(map);
         System.out.println("map.countCollisions() = " + map.countCollisions());
         // Test End
 
