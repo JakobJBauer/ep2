@@ -204,6 +204,8 @@ class IndexTreeNonNullNode implements IndexTreeNode {
     private ComplexCosmicSystem cs;
     private BodyComparator comparator;
 
+    // (V) all inputs are viable and not null
+    // (N) returns an object of Type IndexTreeNonNullNode
     public IndexTreeNonNullNode(Body key, ComplexCosmicSystem cs,
                                 BodyComparator comparator) {
         this.key = key;
@@ -214,6 +216,14 @@ class IndexTreeNonNullNode implements IndexTreeNode {
 
     }
 
+    // (V) node is a viable IndexTreeNode
+    // (N) returns the head of the tree that was traversed
+    // (N) Added node into the fitting lace of the tree, if the key wasn't already a known key
+    /*
+        At first glance it seems like this method interferes with the add() method of IndexTreeNode
+        On further investigation, one can see that this object has no elements in it. Thus, it has to add node to this object, which doesn't happen.
+        The inaccuracy lies in     // (N) if node isn't in tree -> node was added       from IndexTreeNode
+    */
     public IndexTreeNode add(IndexTreeNode node) {
         int comp = this.comparator.compare(this.key, node.getKey());
         if (comp > 0) {
@@ -227,6 +237,11 @@ class IndexTreeNonNullNode implements IndexTreeNode {
         return this;
     }
 
+    // (V) body is a viable Body that is not null
+    // (N) returns the key of body if body is in the tree, otherwise returns null (return value of get() in IndexTreeNullNode)
+    /*
+        This method fits the description in IndexTreeNode prefectly
+    */
     public ComplexCosmicSystem get(Body body) {
         if (key.equals(body)) {
             return cs;
@@ -240,6 +255,10 @@ class IndexTreeNonNullNode implements IndexTreeNode {
 
     }
 
+    // (N) returns a readable representation of that class
+    /*
+        No interference with the base class
+    */
     public String toString() {
         String result;
         String right = this.right.toString();
@@ -252,15 +271,31 @@ class IndexTreeNonNullNode implements IndexTreeNode {
 
     }
 
+    // (N) returns the key of this object
+    /*
+        No interference with the base class
+    */
     public Body getKey() {
         return key;
     }
 
+    // (V) next is a viable iterator
+    // (N) returns an iterator of this object
+    /*
+        Seeing the implementation, it generally is correct.
+        However the problem is, that a left child can be a IndexTreeNullNode, while the right child is a IndexTreeNonNullNode
+        Therefor, this.left must be checked, and this.right.iterator must be returned if this.left is a IndexTreeNullNode (or this can be implemented differently in IndexTreeNullNode)
+    */
     public TreeNodeIterator iterator(TreeNodeIterator next) {
         return left.iterator(new TreeNodeIterator(this, next));
 
     }
 
+    // (V) next is a viable TreeNodeIterator that is not null
+    // (N) returns a viable TreeNodeIterator
+    /*
+        nextStep() wasn't defined in the interface, thus cannot interfere with it
+    */
     public TreeNodeIterator nextStep(TreeNodeIterator next) {
         return right.iterator(next);
     }
