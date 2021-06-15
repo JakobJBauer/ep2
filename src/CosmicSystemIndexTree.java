@@ -143,26 +143,55 @@ class IndexTreeNullNode implements IndexTreeNode {
     // private to avoid object creation from outside
     private IndexTreeNullNode() {}
 
+    // (V) node is a viable IndexTreeNode
+    // (N) no changes, returns the input
+    /*
+        At first glance it seems like this method interferes with the add() method of IndexTreeNode
+        On further investigation, one can see that this object has no elements in it. Thus, it has to add node to this object, which doesn't happen.
+        The inaccuracy lies in     // (N) if node isn't in tree -> node was added       from IndexTreeNode
+    */
     public IndexTreeNode add(IndexTreeNode node) {
         return node;
     }
 
+    // (V) body is a viable Body that is not null
+    // (N) no changes, returns null
+    /*
+        This method fits the description in IndexTreeNode, as body is never containes as a key in an empty tree
+    */
     public ComplexCosmicSystem get(Body body) {
         return null;
     }
 
+    // (N) returns an representation of this object
+    /*
+        This is correct, as "" is the most fitting description for an emty node
+    */
     public String toString() {
         return "";
     }
 
+    // (V) parent is a viable TreeNodeIterator that is not null
+    // (N) returns the input
+    /*
+        According to the description in IndexTreeNode, this should return an empty iterator, as this tree has no objects
+    */
     public TreeNodeIterator iterator(TreeNodeIterator parent) {
         return parent;
     }
 
+    // (N) returns the key of this object
+    /*
+        This is correct, as this object has no key
+    */
     public Body getKey() {
         return null;
     }
 
+    // (N) returns the size of this object
+    /*
+        This is correct, as an empty tree has an size of 0
+    */
     public int size() { return 0; }
 
 }
