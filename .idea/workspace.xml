@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Implemented drawMethod for the CosmicSystemTree">
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Improved isEqualTo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyBodyCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyBodyCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CosmicSystemIndexTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CosmicSystemIndexTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +71,7 @@
     <property name="project.structure.proportion" value="0.116027534" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -228,7 +228,8 @@
       <workItem from="1623082776206" duration="1219000" />
       <workItem from="1623590039911" duration="11869000" />
       <workItem from="1623646652874" duration="3103000" />
-      <workItem from="1623688531184" duration="1285000" />
+      <workItem from="1623688531184" duration="3311000" />
+      <workItem from="1623735388200" duration="1600000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -447,7 +448,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622480549674</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Added isEqualTo Method">
+      <created>1623689842243</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1623689842243</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Improved isEqualTo">
+      <created>1623689965035</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1623689965035</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,8 +484,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../../.." />
     </ignored-roots>
-    <MESSAGE value="Extracted class Node into a dedicated File and renamed it MyNode to dodge possible future issues" />
-    <MESSAGE value="Added TreeNode and implemented constructor, add, get and numberOdBodies" />
     <MESSAGE value="Added getName() to CosmicSystem.java" />
     <MESSAGE value="Added toString() function in CosmicSystemTree.java, to extract a sorted, readable format of the binary tree" />
     <MESSAGE value="Implemented drawMethod for the CosmicSystemTree" />
@@ -494,7 +507,9 @@
     <MESSAGE value="Fixed toString" />
     <MESSAGE value="Implemented Test-Feature" />
     <MESSAGE value="Improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improvements" />
+    <MESSAGE value="Added isEqualTo Method" />
+    <MESSAGE value="Improved isEqualTo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved isEqualTo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1036" y="273" width="789" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619182092624">
@@ -570,20 +585,21 @@
     <state width="1877" height="341" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1623663832022" />
     <state width="1674" height="493" key="GridCell.Tab.1.right/0.0.3440.1410/3440.356.1920.1080@0.0.3440.1410" timestamp="1622480798830" />
     <state width="1676" height="497" key="GridCell.Tab.1.right/0.0.3440.1410@0.0.3440.1410" timestamp="1621482848961" />
-    <state x="795" y="376" key="SettingsEditor" timestamp="1615723518203">
-      <screen x="0" y="0" width="3440" height="1410" />
+    <state x="3884" y="644" key="SettingsEditor" timestamp="1623702507866">
+      <screen x="3440" y="356" width="1920" height="1080" />
     </state>
+    <state x="3884" y="644" key="SettingsEditor/0.0.3440.1410/3440.356.1920.1080@3440.356.1920.1080" timestamp="1623702507866" />
     <state x="795" y="376" key="SettingsEditor/0.0.3440.1410@0.0.3440.1410" timestamp="1615723518203" />
-    <state x="1995" y="445" key="Vcs.Push.Dialog.v2" timestamp="1622480551248">
+    <state x="1995" y="445" key="Vcs.Push.Dialog.v2" timestamp="1623689967238">
       <screen x="0" y="0" width="3440" height="1410" />
     </state>
     <state x="462" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1619456386433" />
-    <state x="1995" y="445" key="Vcs.Push.Dialog.v2/0.0.3440.1410/3440.356.1920.1080@0.0.3440.1410" timestamp="1622480551248" />
+    <state x="1995" y="445" key="Vcs.Push.Dialog.v2/0.0.3440.1410/3440.356.1920.1080@0.0.3440.1410" timestamp="1623689967238" />
     <state x="1995" y="445" key="Vcs.Push.Dialog.v2/0.0.3440.1410@0.0.3440.1410" timestamp="1621482817731" />
-    <state x="1239" y="466" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623590047060">
+    <state x="1239" y="466" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623735433063">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1239" y="466" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1623590047060" />
+    <state x="1239" y="466" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1623735433063" />
     <state x="2220" y="626" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3440.1410/3440.356.1920.1080@0.0.3440.1410" timestamp="1622576063036" />
     <state x="2220" y="626" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3440.1410@0.0.3440.1410" timestamp="1621471305430" />
     <state x="412" y="433" width="895" height="630" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1621481553351">

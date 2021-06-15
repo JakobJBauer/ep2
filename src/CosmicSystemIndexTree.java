@@ -11,6 +11,7 @@ public class CosmicSystemIndexTree implements CosmicSystemIndex, BodyIterable {
     // Initialises this index with a 'comparator' for sorting
     // the keys of this index.
     public CosmicSystemIndexTree(BodyComparator comparator) {
+        assert comparator != null;
         this.comparator = comparator;
         this.root = IndexTreeNullNode.NIL; // NIL in the beginning.
 
@@ -32,12 +33,14 @@ public class CosmicSystemIndexTree implements CosmicSystemIndex, BodyIterable {
         }
 
         for (Body b: system) {
+            assert b != null;
             if (this.contains(b)) {
                 return false;
             }
         }
 
         for (Body b: system) {
+            assert b != null;
             root = root.add(new IndexTreeNonNullNode(b, system.getParent(b), comparator));
         }
 
@@ -49,6 +52,7 @@ public class CosmicSystemIndexTree implements CosmicSystemIndex, BodyIterable {
     // associated. If body is not contained as a key, 'null'
     // is returned.
     public ComplexCosmicSystem getParent(Body body) {
+        assert body != null;
 
         return root.get(body);
     }
@@ -56,6 +60,7 @@ public class CosmicSystemIndexTree implements CosmicSystemIndex, BodyIterable {
     // Returns 'true' if the specified 'body' is listed
     // in the index.
     public boolean contains(Body body) {
+        assert body != null;
         return getParent(body) != null;
     }
 
@@ -95,25 +100,36 @@ interface IndexTreeNode {
     // Adds the specified 'node' to the tree of which 'this' is the root
     // node. If the tree already has a node with the same key as that
     // of 'node' the tree remains unchanged.
+    // (V) node is a viable IndexTreeNode
+    // (N) if node is in tree -> no changes
+    // (N) if node isn't in tree -> node was added
     IndexTreeNode add(IndexTreeNode node);
 
     // Returns the cosmic system with which a body is associated, if 'body' is a key
     // which is contained in this tree (the tree of which 'this' is the root node).
     // If body is not contained as a key, 'null' is returned.
+    // (V) body is a viable Body that is not null (How would get() preform then?)
+    // (N) if body is no key -> no changes and return null
+    // (N) if body is key -> returns the CosmicSystem with what a body is associated
     ComplexCosmicSystem get(Body body);
 
     // Returns a readable representation of the tree of which 'this' is the root node.
+    // (N) returns a readable string of this object
     String toString();
 
     // Returns an iterator over all keys of the tree of which 'this' is the root node.
     // 'parent' is the iterator of the parent (path from the root).
+    // (V) parent is a viable TreeNodeIterator that is not null
+    // (N) returns an iterator over all keys of this object
     TreeNodeIterator iterator(TreeNodeIterator parent);
 
     // Returns the key of this node.
+    // (N) returns the key of this object
     Body getKey();
 
     // Returns the number of entries in the tree of which 'this' is the root
     // node.
+    // (N) returns the number of entries in this tree object
     int size();
 
 }
