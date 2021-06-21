@@ -1,23 +1,23 @@
 public class MyBodyIterator implements BodyIterator {
-    Cluster left, right;
+    BodyIterator left, right;
 
     public MyBodyIterator(Cluster left, Cluster right) {
-        this.left = left;
-        this.right = right;
+        this.left = left.iterator();
+        this.right = right.iterator();
     }
 
     @Override
     public boolean hasNext() {
-        return left.iterator().hasNext() || right.iterator().hasNext();
+        return left.hasNext() || right.hasNext();
     }
 
     @Override
     public Body next() {
-        if (left.iterator().hasNext()) {
-            return left.iterator().next();
+        if (left.hasNext()) {
+            return left.next();
         }
-        if (right.iterator().hasNext()) {
-            return right.iterator().next();
+        if (right.hasNext()) {
+            return right.next();
         }
         throw new IllegalStateException("No next element");
     }

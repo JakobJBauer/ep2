@@ -31,8 +31,14 @@ public class Body implements CosmicComponent, Cluster {
 
     @Override
     public Cluster add(Body c) {
-        return null;
-
+        Cluster leftCluster = this;
+        Cluster rightCluster = c;
+        if (leftCluster.getMass() >= rightCluster.getMass()) {
+            Cluster buffer = leftCluster;
+            leftCluster = rightCluster;
+            rightCluster = buffer;
+        }
+        return new BalancedSystem(leftCluster, rightCluster);
     }
 
     @Override
