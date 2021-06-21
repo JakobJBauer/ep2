@@ -2,7 +2,7 @@ import java.awt.*;
 import java.util.Objects;
 
 // This class represents celestial bodies like stars, planets, asteroids, etc..
-public class Body implements CosmicComponent {
+public class Body implements CosmicComponent, Cluster {
 
     public static final double G = 6.6743e-11;
 
@@ -27,6 +27,12 @@ public class Body implements CosmicComponent {
 
     public String getName() {
         return this.name;
+    }
+
+    @Override
+    public Cluster add(Body c) {
+        return null;
+
     }
 
     @Override
@@ -119,6 +125,10 @@ public class Body implements CosmicComponent {
         return new Body[]{this};
     }
 
+    @Override
+    public BodyIterator iterator() {
+        return iterator(this);
+    }
 }
 
 

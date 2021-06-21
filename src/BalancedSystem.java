@@ -2,12 +2,16 @@ import java.io.IOException;
 
 public class BalancedSystem implements Cluster {
 
-    //TODO: define object variables
+    private Cluster left, right;
 
-    //TODO: implement constructor
     //the constructor should throw a BalancedSystemIllegalArgumentException (to be implemented), if one of the arguments is null
     BalancedSystem(Cluster left, Cluster right) throws BalancedSystemIllegalArgumentException {
+        if (left == null || right == null) {
+            throw new BalancedSystemIllegalArgumentException("None of the arguments may be null!");
+        }
 
+        this.left = left;
+        this.right = right;
     }
 
     @Override
@@ -15,37 +19,35 @@ public class BalancedSystem implements Cluster {
     //the body is added to the left cluster, otherwise to the right cluster.
     //Returns this after the operation
     public Cluster add(Body b) {
-        //TODO
-        return null;
+        if (left.getMass() < right.getMass()) left.add(b);
+        else right.add(b);
+        assert Math.abs(left.getMass() - right.getMass()) < b.getMass();
+        return this;
     }
 
     @Override
     //returns overall number of bodies in the cluster (ans its sub-clusters)
     public int numberOfBodies() {
-        //TODO
-        return -1;
+        return left.numberOfBodies() + right.numberOfBodies();
     }
 
     @Override
     //returns the summed mass of all the bodies in the cluster (ans its sub-clusters)
     public double getMass() {
-        //TODO
-        return -1.0;
+        return left.getMass() + right.getMass();
     }
 
     @Override
     //returns an iterator over all bodies
     public BodyIterator iterator() {
-        //TODO
-        return null;
+        return left.iterator().
     }
 
     @Override
     //returns a String indicating the masses of the left and right subsystem
     //E.g., "Left mass: 10.0, right mass: 12.0
     public String toString() {
-        //TODO
-        return "";
+        return "Left mass: " + left.getMass() + ", right mass: " + right.getMass();
     }
 
 
