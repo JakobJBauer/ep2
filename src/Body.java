@@ -33,7 +33,7 @@ public class Body implements CosmicComponent, Cluster {
     public Cluster add(Body c) {
         Cluster leftCluster = this;
         Cluster rightCluster = c;
-        if (leftCluster.getMass() >= rightCluster.getMass()) {
+        if (leftCluster.getMass() < rightCluster.getMass()) {
             Cluster buffer = leftCluster;
             leftCluster = rightCluster;
             rightCluster = buffer;
