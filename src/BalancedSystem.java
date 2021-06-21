@@ -40,7 +40,7 @@ public class BalancedSystem implements Cluster {
     @Override
     //returns an iterator over all bodies
     public BodyIterator iterator() {
-        return left.iterator().
+        return new MyBodyIterator(left, right);
     }
 
     @Override

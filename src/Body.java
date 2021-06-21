@@ -127,7 +127,35 @@ public class Body implements CosmicComponent, Cluster {
 
     @Override
     public BodyIterator iterator() {
-        return iterator(this);
+        return new MyBodyIterator2(this);
+    }
+
+    public class MyBodyIterator2 implements BodyIterator {
+        Body b;
+        boolean wasCalled = false;
+
+        public MyBodyIterator2(Body b) {
+            this.b = b;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return !wasCalled;
+        }
+
+        @Override
+        public Body next() {
+            if (!wasCalled) {
+                wasCalled = true;
+                return b;
+            }
+            throw new IllegalStateException("No next body");
+        }
+
+        @Override
+        public void remove() {
+
+        }
     }
 }
 

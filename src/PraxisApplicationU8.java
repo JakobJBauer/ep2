@@ -15,7 +15,7 @@ public class PraxisApplicationU8 {
         System.out.println("Test 1: this should throw an exception");
         try {
             bs = new BalancedSystem(null, body2);
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.println("ERROR! " + e.getMessage());
         }
 
@@ -23,7 +23,7 @@ public class PraxisApplicationU8 {
 
         try {
             bs = new BalancedSystem(body1, body2);
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
         System.out.println(bs);
